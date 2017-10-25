@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F4D9FA31FA123E300E0EBED /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D9FA21FA123E300E0EBED /* LoginVC.swift */; };
 		7F6983AF1F8EB61E00064CD8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6983AE1F8EB61E00064CD8 /* MapKit.framework */; };
 		7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */; };
 		B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */; };
-		B091DFE01F85A4DC00BB9ACD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DFDF1F85A4DC00BB9ACD /* ViewController.swift */; };
+		B091DFE01F85A4DC00BB9ACD /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DFDF1F85A4DC00BB9ACD /* MapVC.swift */; };
 		B091DFE31F85A4DC00BB9ACD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B091DFE11F85A4DC00BB9ACD /* Main.storyboard */; };
 		B091DFE51F85A4DC00BB9ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */; };
 		B091DFE81F85A4DC00BB9ACD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B091DFE61F85A4DC00BB9ACD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F4D9FA21FA123E300E0EBED /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7F6983AE1F8EB61E00064CD8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSUAnnotation.swift; sourceTree = "<group>"; };
 		B091DFDA1F85A4DC00BB9ACD /* Outings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B091DFDF1F85A4DC00BB9ACD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B091DFDF1F85A4DC00BB9ACD /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		B091DFE21F85A4DC00BB9ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B091DFE71F85A4DC00BB9ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,9 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */,
-				B091DFDF1F85A4DC00BB9ACD /* ViewController.swift */,
+				B091DFDF1F85A4DC00BB9ACD /* MapVC.swift */,
 				7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */,
 				B091DFE11F85A4DC00BB9ACD /* Main.storyboard */,
+				7F4D9FA21FA123E300E0EBED /* LoginVC.swift */,
 				B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */,
 				B091DFE61F85A4DC00BB9ACD /* LaunchScreen.storyboard */,
 				B091DFE91F85A4DC00BB9ACD /* Info.plist */,
@@ -158,8 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B091DFE01F85A4DC00BB9ACD /* ViewController.swift in Sources */,
+				B091DFE01F85A4DC00BB9ACD /* MapVC.swift in Sources */,
 				B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */,
+				7F4D9FA31FA123E300E0EBED /* LoginVC.swift in Sources */,
 				7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
