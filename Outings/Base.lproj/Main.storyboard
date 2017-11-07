@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tMt-2O-IdI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tMt-2O-IdI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -70,7 +70,7 @@
         <!--Login-->
         <scene sceneID="NVb-wZ-2ux">
             <objects>
-                <viewController id="tMt-2O-IdI" userLabel="Login" sceneMemberID="viewController">
+                <viewController id="tMt-2O-IdI" userLabel="Login" customClass="LoginVC" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KtR-r4-slA"/>
                         <viewControllerLayoutGuide type="bottom" id="pkp-Ce-jWG"/>
@@ -139,6 +139,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.22619232535362244" green="0.2526620626449585" blue="0.36049312353134155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="vnL-tG-9a2" id="bap-l8-AlY"/>
+                        <outlet property="passwordField" destination="pkZ-C3-9z5" id="0Te-rc-MeK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h64-UB-Pd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
