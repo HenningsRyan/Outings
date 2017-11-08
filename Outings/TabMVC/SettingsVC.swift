@@ -1,5 +1,5 @@
 //
-//  LoginVC.swift
+//  SettingsVC.swift
 //  Outings
 //
 //  Created by Ryan Hennings on 11/7/17.
@@ -7,24 +7,15 @@
 //
 
 import UIKit
-import Firebase
 
-class LoginVC: UIViewController {
+class SettingsVC: NavBar {
 
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        super.setUpNavigationBarItems()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
