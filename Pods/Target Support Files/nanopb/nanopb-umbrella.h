@@ -13,6 +13,6 @@
 #import "pb_encode.h"
 #import "pb_common.h"
 
-FOUNDATION_EXPORT double nanopbVersionNumber;
-FOUNDATION_EXPORT const unsigned char nanopbVersionString[];
+extern double nanopbVersionNumber;
+extern const unsigned char nanopbVersionString[];
 
