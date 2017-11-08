@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		7F0A00F31FB2EB9D002BC7C1 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A00F21FB2EB9D002BC7C1 /* SettingsVC.swift */; };
+		7F0DF47F1FB3680800F15799 /* CenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF47E1FB3680800F15799 /* CenterVC.swift */; };
+		7F0DF4831FB3681100F15799 /* LeftMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF4801FB3681100F15799 /* LeftMenuVC.swift */; };
+		7F0DF4841FB3681100F15799 /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF4811FB3681100F15799 /* LeftMenuCell.swift */; };
+		7F0DF4851FB3681100F15799 /* LeftMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0DF4821FB3681100F15799 /* LeftMenuCell.xib */; };
+		7F0DF4901FB3682400F15799 /* FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF4861FB3682300F15799 /* FAPanel.swift */; };
+		7F0DF4911FB3682400F15799 /* FAPanel+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF4871FB3682300F15799 /* FAPanel+Gestures.swift */; };
+		7F0DF4921FB3682400F15799 /* FAPanel+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF4881FB3682300F15799 /* FAPanel+KVO.swift */; };
+		7F0DF4931FB3682400F15799 /* FAPanel+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF4891FB3682300F15799 /* FAPanel+Animations.swift */; };
+		7F0DF4941FB3682400F15799 /* FAPanelConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF48A1FB3682300F15799 /* FAPanelConfigurations.swift */; };
+		7F0DF4951FB3682400F15799 /* UIViewController+FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF48B1FB3682300F15799 /* UIViewController+FAPanel.swift */; };
+		7F0DF4961FB3682400F15799 /* UIView+FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF48C1FB3682300F15799 /* UIView+FAPanel.swift */; };
+		7F0DF4971FB3682400F15799 /* Collection+FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF48D1FB3682300F15799 /* Collection+FAPanel.swift */; };
+		7F0DF4981FB3682400F15799 /* FAPanel+InterfaceRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF48E1FB3682300F15799 /* FAPanel+InterfaceRotation.swift */; };
+		7F0DF4991FB3682400F15799 /* UIImage+FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DF48F1FB3682400F15799 /* UIImage+FAPanel.swift */; };
 		7F2378341FB279930078D7B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2378331FB279920078D7B3 /* Images.xcassets */; };
 		7F2378441FB27F190078D7B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2378431FB27F190078D7B3 /* Main.storyboard */; };
 		7F2378461FB27F230078D7B3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2378451FB27F230078D7B3 /* LoginVC.swift */; };
@@ -32,6 +46,21 @@
 		1C1C695030653DD44CA279E2 /* Pods-Outings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Outings.release.xcconfig"; path = "Pods/Target Support Files/Pods-Outings/Pods-Outings.release.xcconfig"; sourceTree = "<group>"; };
 		6FC1CAFC2DD965384BC6885A /* Pods-Outings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Outings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Outings/Pods-Outings.debug.xcconfig"; sourceTree = "<group>"; };
 		7F0A00F21FB2EB9D002BC7C1 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		7F0DF47E1FB3680800F15799 /* CenterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterVC.swift; sourceTree = "<group>"; };
+		7F0DF4801FB3681100F15799 /* LeftMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuVC.swift; sourceTree = "<group>"; };
+		7F0DF4811FB3681100F15799 /* LeftMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
+		7F0DF4821FB3681100F15799 /* LeftMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuCell.xib; sourceTree = "<group>"; };
+		7F0DF4861FB3682300F15799 /* FAPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAPanel.swift; sourceTree = "<group>"; };
+		7F0DF4871FB3682300F15799 /* FAPanel+Gestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FAPanel+Gestures.swift"; sourceTree = "<group>"; };
+		7F0DF4881FB3682300F15799 /* FAPanel+KVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FAPanel+KVO.swift"; sourceTree = "<group>"; };
+		7F0DF4891FB3682300F15799 /* FAPanel+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FAPanel+Animations.swift"; sourceTree = "<group>"; };
+		7F0DF48A1FB3682300F15799 /* FAPanelConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAPanelConfigurations.swift; sourceTree = "<group>"; };
+		7F0DF48B1FB3682300F15799 /* UIViewController+FAPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+FAPanel.swift"; sourceTree = "<group>"; };
+		7F0DF48C1FB3682300F15799 /* UIView+FAPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FAPanel.swift"; sourceTree = "<group>"; };
+		7F0DF48D1FB3682300F15799 /* Collection+FAPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+FAPanel.swift"; sourceTree = "<group>"; };
+		7F0DF48E1FB3682300F15799 /* FAPanel+InterfaceRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FAPanel+InterfaceRotation.swift"; sourceTree = "<group>"; };
+		7F0DF48F1FB3682400F15799 /* UIImage+FAPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+FAPanel.swift"; sourceTree = "<group>"; };
+		7F0DF49C1FB36A8700F15799 /* FAPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAPanel.h; sourceTree = "<group>"; };
 		7F2378331FB279920078D7B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7F2378431FB27F190078D7B3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7F2378451FB27F230078D7B3 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -72,6 +101,36 @@
 				1C1C695030653DD44CA279E2 /* Pods-Outings.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F0DF49A1FB3682600F15799 /* FAPanel */ = {
+			isa = PBXGroup;
+			children = (
+				7F0DF47E1FB3680800F15799 /* CenterVC.swift */,
+				7F0DF4811FB3681100F15799 /* LeftMenuCell.swift */,
+				7F0DF4821FB3681100F15799 /* LeftMenuCell.xib */,
+				7F0DF4801FB3681100F15799 /* LeftMenuVC.swift */,
+				7F0DF49B1FB3683000F15799 /* Classes */,
+			);
+			path = FAPanel;
+			sourceTree = "<group>";
+		};
+		7F0DF49B1FB3683000F15799 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7F0DF49C1FB36A8700F15799 /* FAPanel.h */,
+				7F0DF48D1FB3682300F15799 /* Collection+FAPanel.swift */,
+				7F0DF4861FB3682300F15799 /* FAPanel.swift */,
+				7F0DF4891FB3682300F15799 /* FAPanel+Animations.swift */,
+				7F0DF4871FB3682300F15799 /* FAPanel+Gestures.swift */,
+				7F0DF48E1FB3682300F15799 /* FAPanel+InterfaceRotation.swift */,
+				7F0DF4881FB3682300F15799 /* FAPanel+KVO.swift */,
+				7F0DF48A1FB3682300F15799 /* FAPanelConfigurations.swift */,
+				7F0DF48F1FB3682400F15799 /* UIImage+FAPanel.swift */,
+				7F0DF48C1FB3682300F15799 /* UIView+FAPanel.swift */,
+				7F0DF48B1FB3682300F15799 /* UIViewController+FAPanel.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		7F23784B1FB27FAB0078D7B3 /* LoginMVC */ = {
@@ -126,6 +185,7 @@
 		B091DFDC1F85A4DC00BB9ACD /* Outings */ = {
 			isa = PBXGroup;
 			children = (
+				7F0DF49A1FB3682600F15799 /* FAPanel */,
 				7F23784B1FB27FAB0078D7B3 /* LoginMVC */,
 				7FBD42F81FB2BC080068B177 /* TabMVC */,
 				B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */,
@@ -214,6 +274,7 @@
 				7F2378441FB27F190078D7B3 /* Main.storyboard in Resources */,
 				7F2378341FB279930078D7B3 /* Images.xcassets in Resources */,
 				7F2378481FB27F2B0078D7B3 /* AMInputView.xib in Resources */,
+				7F0DF4851FB3681100F15799 /* LeftMenuCell.xib in Resources */,
 				7F2D821F1FB2456900221743 /* GoogleService-Info.plist in Resources */,
 				B091DFE51F85A4DC00BB9ACD /* Assets.xcassets in Resources */,
 			);
@@ -275,14 +336,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				B091DFE01F85A4DC00BB9ACD /* MapVC.swift in Sources */,
+				7F0DF4981FB3682400F15799 /* FAPanel+InterfaceRotation.swift in Sources */,
+				7F0DF4901FB3682400F15799 /* FAPanel.swift in Sources */,
+				7F0DF4961FB3682400F15799 /* UIView+FAPanel.swift in Sources */,
+				7F0DF4841FB3681100F15799 /* LeftMenuCell.swift in Sources */,
 				7FBE4B0D1FB2E8C2000C1F65 /* NotificationsVC.swift in Sources */,
 				7FBE4B0B1FB2E505000C1F65 /* MapsVC.swift in Sources */,
+				7F0DF4991FB3682400F15799 /* UIImage+FAPanel.swift in Sources */,
 				B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */,
+				7F0DF4971FB3682400F15799 /* Collection+FAPanel.swift in Sources */,
+				7F0DF47F1FB3680800F15799 /* CenterVC.swift in Sources */,
 				7F2378461FB27F230078D7B3 /* LoginVC.swift in Sources */,
 				7FBD42FA1FB2BC610068B177 /* HomeVC.swift in Sources */,
 				7FBE4B091FB2E409000C1F65 /* NavBar.swift in Sources */,
+				7F0DF4911FB3682400F15799 /* FAPanel+Gestures.swift in Sources */,
+				7F0DF4951FB3682400F15799 /* UIViewController+FAPanel.swift in Sources */,
+				7F0DF4831FB3681100F15799 /* LeftMenuVC.swift in Sources */,
+				7F0DF4941FB3682400F15799 /* FAPanelConfigurations.swift in Sources */,
 				7F23784A1FB27F340078D7B3 /* AMInputView.swift in Sources */,
+				7F0DF4931FB3682400F15799 /* FAPanel+Animations.swift in Sources */,
 				7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */,
+				7F0DF4921FB3682400F15799 /* FAPanel+KVO.swift in Sources */,
 				7F0A00F31FB2EB9D002BC7C1 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

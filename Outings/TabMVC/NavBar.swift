@@ -21,12 +21,12 @@ class NavBar: UIViewController {
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView
         
-        let userIconButton = UIButton(type: .system)
-        userIconButton.setImage(#imageLiteral(resourceName: "userExpand"), for: .normal)
-        userIconButton.tintColor = UIColor.white
-        //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
-        userIconButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
+//        let userIconButton = UIButton(type: .system)
+//        userIconButton.setImage(#imageLiteral(resourceName: "userExpand"), for: .normal)
+//        userIconButton.tintColor = UIColor.white
+//        //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
+//        userIconButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
         
         let mapAddButton = UIButton(type: .system)
         mapAddButton.setImage(#imageLiteral(resourceName: "map-pin"), for: .normal)

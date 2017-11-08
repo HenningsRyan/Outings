@@ -18,6 +18,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let leftMenuVC: LeftMenuVC = mainStoryboard.instantiateViewController(withIdentifier: "LeftMenuVC") as! LeftMenuVC
+        let centerVC: CenterVC = mainStoryboard.instantiateViewController(withIdentifier: "CenterVC1") as! CenterVC
+        let centerNavVC = UINavigationController(rootViewController: centerVC)
+        
+        
+        /*
+         
+         //  Case 1: With Code only approah
+         let rootController = FAPanelController()
+         
+         */
+        
+        
+        //  Case 2: With Xtoryboards, Xibs And NSCoder
+        let rootController: FAPanelController = window?.rootViewController as! FAPanelController
+        
+        rootController.configs.rightPanelWidth = 80
+        rootController.configs.bounceOnRightPanelOpen = false
+        _ = rootController.center(centerNavVC).left(leftMenuVC)
+
+        
 		return true
 	}
 

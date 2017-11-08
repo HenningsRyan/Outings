@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gzb-4R-4LO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Left MenuVC-->
+        <scene sceneID="VtV-eU-rG9">
+            <objects>
+                <viewController storyboardIdentifier="LeftMenuVC" id="79c-aR-sgy" customClass="LeftMenuVC" customModule="FAPanels" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zUv-az-ydc"/>
+                        <viewControllerLayoutGuide type="bottom" id="1TD-ll-sps"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gw4-LX-UZV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H20-tU-qcd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="EVD-wI-bx2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dp" translatesAutoresizingMaskIntoConstraints="NO" id="aF5-lE-Ezm">
+                                            <rect key="frame" x="71.5" y="43" width="130" height="130"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="mQH-fX-yXf"/>
+                                                <constraint firstAttribute="height" constant="130" id="usR-g8-fnK"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="64"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="aF5-lE-Ezm" secondAttribute="bottom" constant="30" id="NDS-tv-tGr"/>
+                                        <constraint firstItem="aF5-lE-Ezm" firstAttribute="leading" secondItem="EVD-wI-bx2" secondAttribute="leading" constant="71.5" id="hUd-lX-LPd"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="3fP-ra-fPj">
+                                    <rect key="frame" x="0.0" y="203" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="79c-aR-sgy" id="QhJ-Jx-xcQ"/>
+                                    <outlet property="delegate" destination="79c-aR-sgy" id="c7I-7J-byp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H20-tU-qcd" firstAttribute="leading" secondItem="gw4-LX-UZV" secondAttribute="leading" id="6PO-aD-Qq7"/>
+                            <constraint firstAttribute="trailing" secondItem="H20-tU-qcd" secondAttribute="trailing" id="b18-EI-JYD"/>
+                            <constraint firstItem="1TD-ll-sps" firstAttribute="top" secondItem="H20-tU-qcd" secondAttribute="bottom" id="c5M-Zs-TXv"/>
+                            <constraint firstItem="H20-tU-qcd" firstAttribute="top" secondItem="gw4-LX-UZV" secondAttribute="top" id="hf1-jx-alh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="H20-tU-qcd" id="p0o-Gm-HVv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="86G-tv-1Ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="-1498"/>
+        </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -292,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="-614" y="353"/>
         </scene>
         <!--MapsVC-->
         <scene sceneID="Biv-cL-KXv">
@@ -440,6 +507,50 @@
             </objects>
             <point key="canvasLocation" x="3311" y="1979"/>
         </scene>
+        <!--FAPanels-->
+        <scene sceneID="qaN-xq-M7o">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7k-UJ-jHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="CenterVC1" id="k8V-fe-Thi" customClass="CenterVC" customModule="FAPanels" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JKp-dm-fNC"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Ci-8s-AJT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E0v-ca-Ihe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.40076903819999998" blue="0.38204178389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FAPanels" id="gsx-RJ-AY1">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="4Nd-Iv-Wa7">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="showLeftVC:" destination="k8V-fe-Thi" id="wJ9-iy-mcK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1270" y="-738"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dTM-iV-Cge">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t9g-Yv-m1Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MSu-6a-VLU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k8V-fe-Thi" kind="relationship" relationship="rootViewController" id="KUS-cF-fPH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OHX-9o-jTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="-738"/>
+        </scene>
         <!--NotificationNav-->
         <scene sceneID="OO8-Jd-yrZ">
             <objects>
@@ -480,10 +591,29 @@
             </objects>
             <point key="canvasLocation" x="2198" y="1979"/>
         </scene>
+        <!--Panel Controller-->
+        <scene sceneID="CRT-LU-qKJ">
+            <objects>
+                <viewController id="Gzb-4R-4LO" customClass="FAPanelController" customModule="FAPanels" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fk0-ur-iJl"/>
+                        <viewControllerLayoutGuide type="bottom" id="had-A0-ZWQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hoE-yI-PGc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTY-rk-oPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="-738"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Notification" width="28" height="30"/>
         <image name="backImage" width="558" height="549"/>
+        <image name="dp" width="1024" height="1024"/>
         <image name="facebook" width="256" height="256"/>
         <image name="gear2" width="30" height="30"/>
         <image name="gear2fill" width="30" height="30"/>
@@ -492,6 +622,7 @@
         <image name="logo" width="304" height="128"/>
         <image name="map2" width="32" height="32"/>
         <image name="map2fill" width="32" height="32"/>
+        <image name="menu" width="27" height="27"/>
         <image name="notificationFill" width="28" height="28"/>
     </resources>
 </document>
