@@ -1,0 +1,11 @@
+framework module FAPanel {
+  umbrella header "FAPanel.h"
+
+  export *
+  module * { export * }
+}
+
+module FAPanel.Swift {
+    header "FAPanel-Swift.h"
+    requires objc
+}

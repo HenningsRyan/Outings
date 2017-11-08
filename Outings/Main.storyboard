@@ -14,7 +14,7 @@
         <!--Left MenuVC-->
         <scene sceneID="VtV-eU-rG9">
             <objects>
-                <viewController storyboardIdentifier="LeftMenuVC" id="79c-aR-sgy" customClass="LeftMenuVC" customModule="FAPanels" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftMenuVC" id="79c-aR-sgy" customClass="LeftMenuVC" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zUv-az-ydc"/>
                         <viewControllerLayoutGuide type="bottom" id="1TD-ll-sps"/>
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-614" y="353"/>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
         <!--MapsVC-->
         <scene sceneID="Biv-cL-KXv">
@@ -510,8 +510,7 @@
         <!--FAPanels-->
         <scene sceneID="qaN-xq-M7o">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H7k-UJ-jHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="CenterVC1" id="k8V-fe-Thi" customClass="CenterVC" customModule="FAPanels" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CenterVC1" id="k8V-fe-Thi" customClass="CenterVC" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JKp-dm-fNC"/>
                         <viewControllerLayoutGuide type="bottom" id="1Ci-8s-AJT"/>
@@ -530,6 +529,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7k-UJ-jHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1270" y="-738"/>
         </scene>
@@ -594,7 +594,7 @@
         <!--Panel Controller-->
         <scene sceneID="CRT-LU-qKJ">
             <objects>
-                <viewController id="Gzb-4R-4LO" customClass="FAPanelController" customModule="FAPanels" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gzb-4R-4LO" customClass="FAPanelController" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fk0-ur-iJl"/>
                         <viewControllerLayoutGuide type="bottom" id="had-A0-ZWQ"/>
