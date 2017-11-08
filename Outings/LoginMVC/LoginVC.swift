@@ -1,9 +1,9 @@
 //
-//  ViewController.swift
+//  LoginVC
 //  AMLoginSingup
 //
-//  Created by amir on 10/11/16.
-//  Copyright © 2016 amirs.eu. All rights reserved.
+//  Based on:  https://github.com/amirdew/AMLoginSignupby
+//  Modified by Ryan Hennings 11/7/17
 //
 
 import UIKit
@@ -83,8 +83,9 @@ class LoginVC: UIViewController {
                     if error == nil {
                         // Transition to home screen
                         print("RYAN: User authenticated with EMAIL firebase")
+                        
+                        //MARK: User Authenticated - Segue to Home
                         self.performSegue(withIdentifier: "toMainMenu", sender: nil)
-                        // perform segue
                     }
                     else {
                         let alertController = UIAlertController(title: "Oops!", message: "Invalid email or password", preferredStyle: .alert)
@@ -131,9 +132,10 @@ class LoginVC: UIViewController {
                         print("RYAN: Error creating user")
                     }
                     else {
+                        //MARK: User Authenticated - Segue to Home
                         print("RYAN: New User added to Firebase")
                         // createFirebaseDBUSer
-                        // segue
+                        self.performSegue(withIdentifier: "toMainMenu", sender: nil)
                     }
                 })
             }
