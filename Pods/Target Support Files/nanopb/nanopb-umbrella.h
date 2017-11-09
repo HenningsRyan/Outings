@@ -1,5 +1,13 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
 #endif
 
 #import "pb.h"
@@ -13,6 +21,6 @@
 #import "pb_encode.h"
 #import "pb_common.h"
 
-extern double nanopbVersionNumber;
-extern const unsigned char nanopbVersionString[];
+FOUNDATION_EXPORT double nanopbVersionNumber;
+FOUNDATION_EXPORT const unsigned char nanopbVersionString[];
 

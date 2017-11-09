@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
 
 enum AMLoginSignupViewMode {
     case login
@@ -30,7 +31,8 @@ class LoginVC: UIViewController {
     @IBOutlet weak var loginButtonVerticalCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var loginButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var loginWidthConstraint: NSLayoutConstraint!
-    
+	@IBOutlet weak var facebookSignupLogin: UIButton!
+	
     //MARK: - signup views and constrains
     @IBOutlet weak var signupView: UIView!
     @IBOutlet weak var signupContentView: UIView!
@@ -59,7 +61,16 @@ class LoginVC: UIViewController {
     //MARK: - controller
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+		
+		// Checks if logged in already
+		if (FBSDKAccessToken.current() == nil) {
+			print("Not logged in..")
+		} else {
+			print("Logged in...")
+			self.performSegue(withIdentifier: "toMainMenu", sender: nil)
+			
+		}
+		
         // set view to login mode
         toggleViewMode(animated: false)
         
@@ -70,7 +81,7 @@ class LoginVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     //MARK: Ryan - Sign in
     
 
@@ -106,7 +117,46 @@ class LoginVC: UIViewController {
         }
     }
     
-    @IBAction func signupButtonTouchUpInside(_ sender: AnyObject) {
+	@IBAction func facebookLoginButtonTouchUpInside(_ sender: AnyObject) {
+		let fbLoginManager = FBSDKLoginManager()
+		fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+			if let error = error {
+				print("Failed to login: \(error.localizedDescription)")
+				return
+			}
+			
+			guard let accessToken = FBSDKAccessToken.current() else {
+				print("Failed to get access token")
+				return
+			}
+			
+			let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+			
+			// Perform login by calling Firebase APIs
+			Auth.auth().signIn(with: credential, completion: { (user, error) in
+				if let error = error {
+					print("Login error: \(error.localizedDescription)")
+					let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+					let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+					alertController.addAction(okayAction)
+					self.present(alertController, animated: true, completion: nil)
+					
+					return
+				}
+				
+				// Present the main view
+				if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+					UIApplication.shared.keyWindow?.rootViewController = viewController
+					self.dismiss(animated: true, completion: nil)
+				}
+				
+			})
+			
+		}
+		
+		
+	}
+	@IBAction func signupButtonTouchUpInside(_ sender: AnyObject) {
         if mode == .login {
             toggleViewMode(animated: true) }
         else {
@@ -141,7 +191,8 @@ class LoginVC: UIViewController {
             }
         }
     }
-    
+	
+
     //MARK: - toggle view
     func toggleViewMode(animated:Bool){
         // toggle mode
