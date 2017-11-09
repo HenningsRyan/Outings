@@ -9,10 +9,33 @@
 import UIKit
 
 class HomeTableVC: UITableViewController {
+    
+    
+    
+    var outings = [Outing]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.backgroundColor = UIColor(hexString: "1A79AC")
+        tableView.separatorStyle = .none
+        let o1 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
+        let o2 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
+        let o3 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
+        let o4 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
+        let o5 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
+        let o6 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
+        let o7 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
+        let o8 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
 
+        outings.append(o1)
+        outings.append(o2)
+        outings.append(o3)
+        outings.append(o4)
+        outings.append(o5)
+        outings.append(o6)
+        outings.append(o7)
+        outings.append(o8)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,25 +50,45 @@ class HomeTableVC: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let outing = outings[indexPath.row]
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return outings.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as? HomeViewCell {
+            // Card/Cell Formatting
+            cell.contentView.backgroundColor = UIColor(hexString: "1A79AC")
+            let whiteRoundedView : UIView = UIView(frame: CGRect(x: 10, y: 8, width: self.view.frame.size.width - 20, height: 120))
+            whiteRoundedView.layer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 1.0, 0.9])
+            whiteRoundedView.layer.masksToBounds = false
+            whiteRoundedView.layer.cornerRadius = 10.0
+            whiteRoundedView.layer.shadowOffset = CGSize(width: -1, height: 1)
+            whiteRoundedView.layer.shadowOpacity = 0.2
+            cell.contentView.addSubview(whiteRoundedView)
+            cell.contentView.sendSubview(toBack: whiteRoundedView)
+            // End Formatting
+            
+            let outing = outings[indexPath.row]
+            
+            cell.updateUI(outing: outing)
+            
+            return cell
+        }
+        // Outings Cast Failed
+        else {
+            return UITableViewCell()
+        }
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,4 +135,24 @@ class HomeTableVC: UITableViewController {
     }
     */
 
+}
+
+extension UIColor {
+    convenience init(hexString: String) {
+        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt32()
+        Scanner(string: hex).scanHexInt32(&int)
+        let a, r, g, b: UInt32
+        switch hex.characters.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (255, 0, 0, 0)
+        }
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+    }
 }

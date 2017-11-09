@@ -16,12 +16,14 @@
 		7F2D821F1FB2456900221743 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D821E1FB2456900221743 /* GoogleService-Info.plist */; };
 		7F6983AF1F8EB61E00064CD8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6983AE1F8EB61E00064CD8 /* MapKit.framework */; };
 		7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */; };
-		7FA2FEB51FB3E1EB000EE6CF /* homeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA2FEB41FB3E1EB000EE6CF /* homeScreen.storyboard */; };
 		7FA2FEB71FB40AFC000EE6CF /* HomeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */; };
 		7FBD42FA1FB2BC610068B177 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD42F91FB2BC610068B177 /* HomeVC.swift */; };
 		7FBE4B091FB2E409000C1F65 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B081FB2E409000C1F65 /* NavBar.swift */; };
 		7FBE4B0B1FB2E505000C1F65 /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B0A1FB2E505000C1F65 /* MapsVC.swift */; };
 		7FBE4B0D1FB2E8C2000C1F65 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B0C1FB2E8C2000C1F65 /* NotificationsVC.swift */; };
+		7FFDCCD01FB44FBF0097552C /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */; };
+		7FFDCCD21FB4E9240097552C /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */; };
+		7FFDCCD41FB4EE810097552C /* OutingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDCCD31FB4EE810097552C /* OutingModel.swift */; };
 		B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */; };
 		B091DFE01F85A4DC00BB9ACD /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DFDF1F85A4DC00BB9ACD /* MapVC.swift */; };
 		B091DFE51F85A4DC00BB9ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */; };
@@ -42,12 +44,14 @@
 		7F2D821E1FB2456900221743 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F6983AE1F8EB61E00064CD8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSUAnnotation.swift; sourceTree = "<group>"; };
-		7FA2FEB41FB3E1EB000EE6CF /* homeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = homeScreen.storyboard; sourceTree = "<group>"; };
 		7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableVC.swift; sourceTree = "<group>"; };
 		7FBD42F91FB2BC610068B177 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7FBE4B081FB2E409000C1F65 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		7FBE4B0A1FB2E505000C1F65 /* MapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
 		7FBE4B0C1FB2E8C2000C1F65 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
+		7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
+		7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		7FFDCCD31FB4EE810097552C /* OutingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutingModel.swift; sourceTree = "<group>"; };
 		B091DFDA1F85A4DC00BB9ACD /* Outings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B091DFDF1F85A4DC00BB9ACD /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -131,7 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */,
-				7FA2FEB41FB3E1EB000EE6CF /* homeScreen.storyboard */,
+				7FFDCCD31FB4EE810097552C /* OutingModel.swift */,
+				7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */,
+				7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */,
 				7F23784B1FB27FAB0078D7B3 /* LoginMVC */,
 				7FBD42F81FB2BC080068B177 /* TabMVC */,
 				B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */,
@@ -217,10 +223,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B091DFE81F85A4DC00BB9ACD /* LaunchScreen.storyboard in Resources */,
+				7FFDCCD01FB44FBF0097552C /* HomeView.storyboard in Resources */,
 				7F2378441FB27F190078D7B3 /* Main.storyboard in Resources */,
 				7F2378341FB279930078D7B3 /* Images.xcassets in Resources */,
 				7F2378481FB27F2B0078D7B3 /* AMInputView.xib in Resources */,
-				7FA2FEB51FB3E1EB000EE6CF /* homeScreen.storyboard in Resources */,
 				7F2D821F1FB2456900221743 /* GoogleService-Info.plist in Resources */,
 				B091DFE51F85A4DC00BB9ACD /* Assets.xcassets in Resources */,
 			);
@@ -286,6 +292,8 @@
 				7FBE4B0B1FB2E505000C1F65 /* MapsVC.swift in Sources */,
 				B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */,
 				7FA2FEB71FB40AFC000EE6CF /* HomeTableVC.swift in Sources */,
+				7FFDCCD21FB4E9240097552C /* HomeViewCell.swift in Sources */,
+				7FFDCCD41FB4EE810097552C /* OutingModel.swift in Sources */,
 				7F2378461FB27F230078D7B3 /* LoginVC.swift in Sources */,
 				7FBD42FA1FB2BC610068B177 /* HomeVC.swift in Sources */,
 				7FBE4B091FB2E409000C1F65 /* NavBar.swift in Sources */,
