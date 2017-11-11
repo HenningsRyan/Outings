@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NMr-T1-anx">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -144,7 +144,7 @@
             </objects>
             <point key="canvasLocation" x="-762.31884057971024" y="129.61956521739131"/>
         </scene>
-        <!--Map StartVC-->
+        <!--Map-->
         <scene sceneID="Vmp-m4-pHq">
             <objects>
                 <viewController id="x9N-M7-api" customClass="MapStartVC" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,10 +154,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Jky-lF-eHe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Map" id="lnb-it-qTA">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="locationLine" landscapeImage="locationLine" largeContentSizeImage="locationLine" style="plain" id="GgA-bv-aoc">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wcu-4D-nwY">
+                                <rect key="frame" x="370" y="6" width="24" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="locationLine"/>
+                                <connections>
+                                    <action selector="mapTrackingTogglePressed:" destination="x9N-M7-api" eventType="touchUpInside" id="kRh-nu-srv"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapNavBarButton" destination="GgA-bv-aoc" id="Dtd-dE-Weo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGF-3J-ybI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3625" y="130"/>
+            <point key="canvasLocation" x="-549" y="915"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kZa-Rg-X2i">
@@ -173,6 +190,7 @@
                         <color key="selectedImageTintColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="3bP-7i-WfM" kind="relationship" relationship="viewControllers" id="yeu-I9-IBm"/>
                         <segue destination="dHH-tE-FYo" kind="relationship" relationship="viewControllers" id="N7P-kM-oa1"/>
                     </connections>
                 </tabBarController>
@@ -183,7 +201,7 @@
         <!--Home-->
         <scene sceneID="ncV-8L-dfg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dHH-tE-FYo" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dHH-tE-FYo" customClass="NavController" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="homeLine" selectedImage="home2fill" id="8fU-AD-fwy">
                         <color key="badgeColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -205,12 +223,41 @@
             </objects>
             <point key="canvasLocation" x="-1484" y="130"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="kK0-7b-p27">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3bP-7i-WfM" customClass="NavController" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map2" selectedImage="map2fill" id="NbP-iO-Uc9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PIX-7L-vbS">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1360853612" green="0.17230233549999999" blue="0.1932197809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x9N-M7-api" kind="relationship" relationship="rootViewController" id="dKO-EX-6RE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzL-fA-eKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1484" y="966"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Calendar" width="48" height="48"/>
         <image name="backImage" width="558" height="549"/>
         <image name="home2fill" width="32" height="32"/>
         <image name="homeLine" width="32" height="32"/>
+        <image name="locationLine" width="24" height="32"/>
+        <image name="map2" width="32" height="32"/>
+        <image name="map2fill" width="32" height="32"/>
         <image name="user" width="32" height="32"/>
     </resources>
 </document>

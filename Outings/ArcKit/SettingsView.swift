@@ -76,7 +76,7 @@ class SettingsView: UIScrollView {
         
         let currentLocation = ToggleBox(text: "Enable showsUserLocation", toggleDefault: true) { isOn in
             self.showUserLocation = isOn
-            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
+//            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
         }
         settingsRows.addRow(views: [currentLocation])
         
@@ -84,11 +84,11 @@ class SettingsView: UIScrollView {
         
         let satellite = ToggleBox(text: "Satellite map", toggleDefault: false) { isOn in
             self.showSatelliteMap = isOn
-            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
+//            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
         }
         let zoom = ToggleBox(text: "Auto zoom") { isOn in
             self.autoZoomMap = isOn
-            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
+//            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
         }
         settingsRows.addRow(views: [satellite, zoom])
         
@@ -99,13 +99,13 @@ class SettingsView: UIScrollView {
         
         let raw = ToggleBox(dotColors: [.red], text: "Raw") { isOn in
             self.showRawLocations = isOn
-            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
+//            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
         }
         let smoothed = ToggleBox(dotColors: [.blue, .magenta], text: "Samples") { isOn in
             self.showLocomotionSamples = isOn
             self.visitsToggle?.isEnabled = isOn
             self.visitsToggleBox?.subviews.forEach { $0.alpha = isOn ? 1 : 0.45 }
-            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
+//            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
         }
         settingsRows.addRow(views: [raw, smoothed])
         
@@ -113,11 +113,11 @@ class SettingsView: UIScrollView {
         
         let filtered = ToggleBox(dotColors: [.purple], text: "Filtered") { isOn in
             self.showFilteredLocations = isOn
-            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
+//            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
         }
         let visits = ToggleBox(dotColors: [.orange], text: "Visits") { isOn in
             self.showStationaryCircles = isOn
-            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
+//            NotificationCenter.default.post(Notification(name: .settingsChanged, object: self))
         }
         settingsRows.addRow(views: [filtered, visits])
         

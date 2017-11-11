@@ -20,10 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
         FirebaseApp.configure()
         
-        window = UIWindow(frame: UIScreen.main.bounds)
+//        window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.rootViewController = MapStartVC()
-        window?.makeKeyAndVisible()
+//        window?.rootViewController = MapStartVC()
+//        window?.makeKeyAndVisible()
         
 		return true
 	}

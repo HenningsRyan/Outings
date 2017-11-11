@@ -12,5 +12,7 @@ target 'Outings' do
   pod 'ArcKit'
   pod 'MGEvents', :inhibit_warnings => true
   pod 'Cartography', :inhibit_warnings => true
+  pod 'XLActionController'
+  pod 'XLActionController/Periscope'
 
 end

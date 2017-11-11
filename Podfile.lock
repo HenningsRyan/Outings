@@ -74,6 +74,11 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.4.0)
+  - XLActionController (4.0.0):
+    - XLActionController/Core (= 4.0.0)
+  - XLActionController/Core (4.0.0)
+  - XLActionController/Periscope (4.0.0):
+    - XLActionController/Core
 
 DEPENDENCIES:
   - ArcKit
@@ -82,6 +87,8 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - MGEvents
+  - XLActionController
+  - XLActionController/Periscope
 
 SPEC CHECKSUMS:
   ArcKit: 6d3db1217dfbcffc6116a0b926c8bf8c0ec86988
@@ -103,7 +110,8 @@ SPEC CHECKSUMS:
   MGEvents: 04c4c5b49a420a4895c5bb676ccc708311176d14
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
+  XLActionController: 7e88fece1799e61357cb00b1cc67104d66ec4d2c
 
-PODFILE CHECKSUM: cff2c9d9273b5dfd83d91b2da639985a50003f9c
+PODFILE CHECKSUM: c1a301b24ac068b85b9079c3c271930464a63185
 
 COCOAPODS: 1.1.1
