@@ -1,10 +1,12 @@
 PODS:
+  - ArcKit (2.1.0)
   - BoringSSL (9.1):
     - BoringSSL/Implementation (= 9.1)
     - BoringSSL/Interface (= 9.1)
   - BoringSSL/Implementation (9.1):
     - BoringSSL/Interface (= 9.1)
   - BoringSSL/Interface (9.1)
+  - Cartography (3.0.0)
   - Firebase/Auth (4.5.0):
     - Firebase/Core
     - FirebaseAuth (= 4.3.1)
@@ -65,6 +67,7 @@ PODS:
     - gRPC-RxLibrary (= 1.7.1)
   - GTMSessionFetcher/Core (1.1.12)
   - leveldb-library (1.20)
+  - MGEvents (1.1.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -73,12 +76,17 @@ PODS:
   - Protobuf (3.4.0)
 
 DEPENDENCIES:
+  - ArcKit
+  - Cartography
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - MGEvents
 
 SPEC CHECKSUMS:
+  ArcKit: 6d3db1217dfbcffc6116a0b926c8bf8c0ec86988
   BoringSSL: 84318770d120503ab1a6aaf1df777c5ca053697e
+  Cartography: 105643267226a7ab58895b94b44727eb013e31ce
   Firebase: d83d287bdb6b1c78320561482706d1fcfc8ddfc1
   FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
   FirebaseAuth: e7c2b1359c2df4af23a568100a8eace0b8c507e4
@@ -92,9 +100,10 @@ SPEC CHECKSUMS:
   gRPC-RxLibrary: 4f46343e74e74a7ee8373ffeeaf772dfb330cbd7
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 44ef425bfde64f5b41daef86b38db2d13edbbee1
+  MGEvents: 04c4c5b49a420a4895c5bb676ccc708311176d14
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
 
-PODFILE CHECKSUM: 6ab8b9fb89d42b0cd84f88b8859e211466fc2ac1
+PODFILE CHECKSUM: cff2c9d9273b5dfd83d91b2da639985a50003f9c
 
 COCOAPODS: 1.1.1

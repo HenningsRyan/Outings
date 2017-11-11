@@ -1,0 +1,11 @@
+framework module ArcKit {
+  umbrella header "ArcKit.h"
+
+  export *
+  module * { export * }
+}
+
+module ArcKit.Swift {
+    header "ArcKit-Swift.h"
+    requires objc
+}

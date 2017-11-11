@@ -9,9 +9,7 @@
 import UIKit
 
 class HomeTableVC: UITableViewController {
-    
-    
-    
+
     var outings = [Outing]()
 
     override func viewDidLoad() {
@@ -19,14 +17,14 @@ class HomeTableVC: UITableViewController {
         
         self.tableView.backgroundColor = UIColor(hexString: "1A79AC")
         tableView.separatorStyle = .none
-        let o1 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
-        let o2 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
-        let o3 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
-        let o4 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
-        let o5 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
-        let o6 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
-        let o7 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
-        let o8 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennigns", date: "01/21/18", info: "HEY this a test cell that talks about the event")
+        let o1 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennings", date: "11/21/17", info: "Mission Peak Hike!")
+        let o2 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ben Dover", date: "11/27/17", info: "Campbell Bar Crawl")
+        let o3 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Mike Hawk", date: "11/29/17", info: "Neighborhood Walk")
+        let o4 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Barry McCockiner", date: "12/02/17", info: "SF Parade")
+        let o5 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Amanda Hugenkiss", date: "12/10/17", info: "Coffee Crawl")
+        let o6 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Wayne Kerr", date: "12/13/17", info: "Mt. Everest Hike")
+        let o7 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Matt Sterbate", date: "01/08/18", info: "El Toro Night Walk")
+        let o8 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Jack Cass", date: "01/21/18", info: "SJSU Lap")
 
         outings.append(o1)
         outings.append(o2)
