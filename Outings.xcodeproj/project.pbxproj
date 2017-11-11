@@ -17,17 +17,17 @@
 		7F6983AF1F8EB61E00064CD8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6983AE1F8EB61E00064CD8 /* MapKit.framework */; };
 		7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */; };
 		7FA2FEB71FB40AFC000EE6CF /* HomeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */; };
-		7FA688A41FB65F4600850B42 /* VisitAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA6889F1FB65F4400850B42 /* VisitAnnotation.swift */; };
-		7FA688A51FB65F4600850B42 /* VisitAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688A01FB65F4500850B42 /* VisitAnnotationView.swift */; };
-		7FA688A61FB65F4600850B42 /* ToggleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688A11FB65F4500850B42 /* ToggleBox.swift */; };
-		7FA688A71FB65F4600850B42 /* PathPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688A21FB65F4500850B42 /* PathPolyline.swift */; };
-		7FA688A81FB65F4600850B42 /* VisitCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688A31FB65F4600850B42 /* VisitCircle.swift */; };
-		7FA688AF1FB65F7600850B42 /* String.helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688AB1FB65F7500850B42 /* String.helpers.swift */; };
-		7FA688B01FB65F7600850B42 /* UIStackView.helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688AC1FB65F7500850B42 /* UIStackView.helpers.swift */; };
-		7FA688B11FB65F7600850B42 /* Array.helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688AD1FB65F7600850B42 /* Array.helpers.swift */; };
-		7FA688B21FB65F7600850B42 /* CoreLocation.helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688AE1FB65F7600850B42 /* CoreLocation.helpers.swift */; };
-		7FA688B81FB6602900850B42 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688B61FB6602900850B42 /* SettingsView.swift */; };
 		7FA688BA1FB662F700850B42 /* MapStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688B91FB662F700850B42 /* MapStartVC.swift */; };
+		7FAB30A01FB67A2F00CA2119 /* VisitAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB30951FB67A2E00CA2119 /* VisitAnnotationView.swift */; };
+		7FAB30A21FB67A2F00CA2119 /* UIStackView.helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB30971FB67A2E00CA2119 /* UIStackView.helpers.swift */; };
+		7FAB30A31FB67A2F00CA2119 /* Array.helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB30981FB67A2E00CA2119 /* Array.helpers.swift */; };
+		7FAB30A41FB67A2F00CA2119 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB30991FB67A2E00CA2119 /* SettingsView.swift */; };
+		7FAB30A51FB67A2F00CA2119 /* VisitAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB309A1FB67A2E00CA2119 /* VisitAnnotation.swift */; };
+		7FAB30A61FB67A2F00CA2119 /* PathPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB309B1FB67A2E00CA2119 /* PathPolyline.swift */; };
+		7FAB30A71FB67A2F00CA2119 /* String.helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB309C1FB67A2F00CA2119 /* String.helpers.swift */; };
+		7FAB30A81FB67A2F00CA2119 /* ToggleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB309D1FB67A2F00CA2119 /* ToggleBox.swift */; };
+		7FAB30A91FB67A2F00CA2119 /* VisitCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB309E1FB67A2F00CA2119 /* VisitCircle.swift */; };
+		7FAB30AA1FB67A2F00CA2119 /* CoreLocation.helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB309F1FB67A2F00CA2119 /* CoreLocation.helpers.swift */; };
 		7FBD42FA1FB2BC610068B177 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD42F91FB2BC610068B177 /* HomeVC.swift */; };
 		7FBE4B091FB2E409000C1F65 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B081FB2E409000C1F65 /* NavBar.swift */; };
 		7FBE4B0B1FB2E505000C1F65 /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B0A1FB2E505000C1F65 /* MapsVC.swift */; };
@@ -56,17 +56,17 @@
 		7F6983AE1F8EB61E00064CD8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSUAnnotation.swift; sourceTree = "<group>"; };
 		7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableVC.swift; sourceTree = "<group>"; };
-		7FA6889F1FB65F4400850B42 /* VisitAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitAnnotation.swift; sourceTree = "<group>"; };
-		7FA688A01FB65F4500850B42 /* VisitAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitAnnotationView.swift; sourceTree = "<group>"; };
-		7FA688A11FB65F4500850B42 /* ToggleBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleBox.swift; sourceTree = "<group>"; };
-		7FA688A21FB65F4500850B42 /* PathPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPolyline.swift; sourceTree = "<group>"; };
-		7FA688A31FB65F4600850B42 /* VisitCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitCircle.swift; sourceTree = "<group>"; };
-		7FA688AB1FB65F7500850B42 /* String.helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.helpers.swift; sourceTree = "<group>"; };
-		7FA688AC1FB65F7500850B42 /* UIStackView.helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.helpers.swift; sourceTree = "<group>"; };
-		7FA688AD1FB65F7600850B42 /* Array.helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.helpers.swift; sourceTree = "<group>"; };
-		7FA688AE1FB65F7600850B42 /* CoreLocation.helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocation.helpers.swift; sourceTree = "<group>"; };
-		7FA688B61FB6602900850B42 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7FA688B91FB662F700850B42 /* MapStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStartVC.swift; sourceTree = "<group>"; };
+		7FAB30951FB67A2E00CA2119 /* VisitAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitAnnotationView.swift; sourceTree = "<group>"; };
+		7FAB30971FB67A2E00CA2119 /* UIStackView.helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.helpers.swift; sourceTree = "<group>"; };
+		7FAB30981FB67A2E00CA2119 /* Array.helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.helpers.swift; sourceTree = "<group>"; };
+		7FAB30991FB67A2E00CA2119 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7FAB309A1FB67A2E00CA2119 /* VisitAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitAnnotation.swift; sourceTree = "<group>"; };
+		7FAB309B1FB67A2E00CA2119 /* PathPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPolyline.swift; sourceTree = "<group>"; };
+		7FAB309C1FB67A2F00CA2119 /* String.helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.helpers.swift; sourceTree = "<group>"; };
+		7FAB309D1FB67A2F00CA2119 /* ToggleBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleBox.swift; sourceTree = "<group>"; };
+		7FAB309E1FB67A2F00CA2119 /* VisitCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitCircle.swift; sourceTree = "<group>"; };
+		7FAB309F1FB67A2F00CA2119 /* CoreLocation.helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocation.helpers.swift; sourceTree = "<group>"; };
 		7FBD42F91FB2BC610068B177 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7FBE4B081FB2E409000C1F65 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		7FBE4B0A1FB2E505000C1F65 /* MapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
@@ -123,38 +123,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7FA688A91FB65F5B00850B42 /* ArcKit */ = {
+		7FAB30AB1FB67A5200CA2119 /* ArcKit */ = {
 			isa = PBXGroup;
 			children = (
-				7FA688B61FB6602900850B42 /* SettingsView.swift */,
-				7FA688B41FB65FAE00850B42 /* Views */,
-				7FA688B31FB65F7A00850B42 /* Helpers */,
+				7FAB30991FB67A2E00CA2119 /* SettingsView.swift */,
+				7FAB30AD1FB67A8A00CA2119 /* Views */,
+				7FAB30AC1FB67A7400CA2119 /* Helpers */,
 			);
-			name = ArcKit;
-			path = ..;
+			path = ArcKit;
 			sourceTree = "<group>";
 		};
-		7FA688B31FB65F7A00850B42 /* Helpers */ = {
+		7FAB30AC1FB67A7400CA2119 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7FA688AD1FB65F7600850B42 /* Array.helpers.swift */,
-				7FA688AE1FB65F7600850B42 /* CoreLocation.helpers.swift */,
-				7FA688AB1FB65F7500850B42 /* String.helpers.swift */,
-				7FA688AC1FB65F7500850B42 /* UIStackView.helpers.swift */,
+				7FAB309B1FB67A2E00CA2119 /* PathPolyline.swift */,
+				7FAB309D1FB67A2F00CA2119 /* ToggleBox.swift */,
+				7FAB309A1FB67A2E00CA2119 /* VisitAnnotation.swift */,
+				7FAB30951FB67A2E00CA2119 /* VisitAnnotationView.swift */,
+				7FAB309E1FB67A2F00CA2119 /* VisitCircle.swift */,
+				7FAB30981FB67A2E00CA2119 /* Array.helpers.swift */,
+				7FAB309F1FB67A2F00CA2119 /* CoreLocation.helpers.swift */,
+				7FAB309C1FB67A2F00CA2119 /* String.helpers.swift */,
+				7FAB30971FB67A2E00CA2119 /* UIStackView.helpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		7FA688B41FB65FAE00850B42 /* Views */ = {
+		7FAB30AD1FB67A8A00CA2119 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7FA688A21FB65F4500850B42 /* PathPolyline.swift */,
-				7FA688A11FB65F4500850B42 /* ToggleBox.swift */,
-				7FA6889F1FB65F4400850B42 /* VisitAnnotation.swift */,
-				7FA688A01FB65F4500850B42 /* VisitAnnotationView.swift */,
-				7FA688A31FB65F4600850B42 /* VisitCircle.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7FBD42F81FB2BC080068B177 /* TabMVC */ = {
@@ -190,11 +189,11 @@
 		B091DFDC1F85A4DC00BB9ACD /* Outings */ = {
 			isa = PBXGroup;
 			children = (
+				7FAB30AB1FB67A5200CA2119 /* ArcKit */,
 				7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */,
 				7FFDCCD31FB4EE810097552C /* OutingModel.swift */,
 				7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */,
 				7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */,
-				7FA688A91FB65F5B00850B42 /* ArcKit */,
 				7F23784B1FB27FAB0078D7B3 /* LoginMVC */,
 				7FBD42F81FB2BC080068B177 /* TabMVC */,
 				B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */,
@@ -345,30 +344,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FA688B21FB65F7600850B42 /* CoreLocation.helpers.swift in Sources */,
-				7FA688A71FB65F4600850B42 /* PathPolyline.swift in Sources */,
-				7FA688A41FB65F4600850B42 /* VisitAnnotation.swift in Sources */,
+				7FAB30A81FB67A2F00CA2119 /* ToggleBox.swift in Sources */,
 				B091DFE01F85A4DC00BB9ACD /* MapVC.swift in Sources */,
 				7FBE4B0D1FB2E8C2000C1F65 /* NotificationsVC.swift in Sources */,
-				7FA688B01FB65F7600850B42 /* UIStackView.helpers.swift in Sources */,
+				7FAB30A51FB67A2F00CA2119 /* VisitAnnotation.swift in Sources */,
 				7FBE4B0B1FB2E505000C1F65 /* MapsVC.swift in Sources */,
+				7FAB30A21FB67A2F00CA2119 /* UIStackView.helpers.swift in Sources */,
 				B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */,
-				7FA688B81FB6602900850B42 /* SettingsView.swift in Sources */,
-				7FA688A61FB65F4600850B42 /* ToggleBox.swift in Sources */,
 				7FA688BA1FB662F700850B42 /* MapStartVC.swift in Sources */,
-				7FA688A81FB65F4600850B42 /* VisitCircle.swift in Sources */,
-				7FA688B11FB65F7600850B42 /* Array.helpers.swift in Sources */,
 				7FA2FEB71FB40AFC000EE6CF /* HomeTableVC.swift in Sources */,
 				7FFDCCD21FB4E9240097552C /* HomeViewCell.swift in Sources */,
 				7FFDCCD41FB4EE810097552C /* OutingModel.swift in Sources */,
-				7FA688AF1FB65F7600850B42 /* String.helpers.swift in Sources */,
 				7F2378461FB27F230078D7B3 /* LoginVC.swift in Sources */,
 				7FBD42FA1FB2BC610068B177 /* HomeVC.swift in Sources */,
+				7FAB30A91FB67A2F00CA2119 /* VisitCircle.swift in Sources */,
 				7FBE4B091FB2E409000C1F65 /* NavBar.swift in Sources */,
+				7FAB30A31FB67A2F00CA2119 /* Array.helpers.swift in Sources */,
+				7FAB30A61FB67A2F00CA2119 /* PathPolyline.swift in Sources */,
 				7F23784A1FB27F340078D7B3 /* AMInputView.swift in Sources */,
 				7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */,
 				7F0A00F31FB2EB9D002BC7C1 /* SettingsVC.swift in Sources */,
-				7FA688A51FB65F4600850B42 /* VisitAnnotationView.swift in Sources */,
+				7FAB30AA1FB67A2F00CA2119 /* CoreLocation.helpers.swift in Sources */,
+				7FAB30A01FB67A2F00CA2119 /* VisitAnnotationView.swift in Sources */,
+				7FAB30A41FB67A2F00CA2119 /* SettingsView.swift in Sources */,
+				7FAB30A71FB67A2F00CA2119 /* String.helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
