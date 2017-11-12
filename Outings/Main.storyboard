@@ -193,9 +193,6 @@
                                                     <constraint firstAttribute="height" constant="64" id="imb-ns-hge"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="facebook"/>
-                                                <connections>
-                                                    <action selector="facebookLoginButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6cd-8M-3jb"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
