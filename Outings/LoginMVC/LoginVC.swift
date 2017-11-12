@@ -59,7 +59,6 @@ class LoginVC: UIViewController {
     //MARK: - controller
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         // set view to login mode
         toggleViewMode(animated: false)
         
@@ -81,11 +80,18 @@ class LoginVC: UIViewController {
             if let email = loginEmailInputView.textFieldView.text, let pwd = loginPasswordInputView.textFieldView.text {
                 Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                     if error == nil {
-                        // Transition to home screen
                         print("RYAN: User authenticated with EMAIL firebase")
                         
-                        //MARK: User Authenticated - Segue to Home
-                        self.performSegue(withIdentifier: "toMainMenu", sender: nil)
+                        if let userID = user?.uid,
+                            let provider = user?.providerID,
+                            let emailAddr = user?.email {
+                            
+                            let userData = [
+                                "provider": provider,
+                                "email": emailAddr]
+                            
+                            self.completeSignIn(id: userID, userData: userData)
+                        }
                     }
                     else {
                         let alertController = UIAlertController(title: "Oops!", message: "Invalid email or password", preferredStyle: .alert)
@@ -100,7 +106,6 @@ class LoginVC: UIViewController {
             }
             //TODO: Further Validation
 
-            
             //TODO: login by this data
 //            NSLog("Email:\(String(describing: loginEmailInputView.textFieldView.text)) Password:\(String(describing: loginPasswordInputView.textFieldView.text))")
         }
@@ -128,19 +133,32 @@ class LoginVC: UIViewController {
                         
                         self.present(alertController, animated: true, completion: nil)
                         
-                        // Console Debug
                         print("RYAN: Error creating user")
                     }
                     else {
-                        //MARK: User Authenticated - Segue to Home
                         print("RYAN: New User added to Firebase")
+                        if let userID = user?.uid,
+                            let provider = user?.providerID,
+                            let emailAddr = user?.email {
+                            let userData = [
+                                "provider": provider,
+                                "email": emailAddr]
+                            self.completeSignIn(id: userID, userData: userData)
+                        }
                         // createFirebaseDBUSer
-                        self.performSegue(withIdentifier: "toMainMenu", sender: nil)
+//                        self.performSegue(withIdentifier: "toMainMenu", sender: nil)
                     }
                 })
             }
         }
     }
+    
+    //MARK: User Authenticated - Segue to Home
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.dataStorage.createFirestoreDBUser(uid: id, userData: userData)
+        self.performSegue(withIdentifier: "toMainMenu", sender: nil)
+    }
+    
     
     //MARK: - toggle view
     func toggleViewMode(animated:Bool){

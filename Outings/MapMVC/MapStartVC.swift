@@ -200,7 +200,7 @@ class MapStartVC: UIViewController {
             else { mapRect = MKMapRectUnion(mapRect!, overlay.boundingMapRect) }
         }
         
-        let padding = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        let padding = UIEdgeInsets(top: constants.edgeDistance, left: constants.edgeDistance, bottom: constants.edgeDistance, right: constants.edgeDistance)
         map.setVisibleMapRect(mapRect!, edgePadding: padding, animated: true)
     }
     
@@ -296,21 +296,6 @@ class MapStartVC: UIViewController {
         map.showsScale = true
 
         return map
-    }()
-    
-    lazy var stopButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.isHidden = true
-        
-        button.backgroundColor = .white
-        button.setTitle("Stop", for: .normal)
-        button.setTitleColor(.red, for: .normal)
-        
-        button.onControlEvent(.touchUpInside) { [weak self] in
-//            self?.tappedStop()
-        }
-        
-        return button
     }()
 }
 

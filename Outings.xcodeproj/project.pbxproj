@@ -10,6 +10,8 @@
 		7F00D3391FB78BFF00F8E775 /* XLActionController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00D3381FB78BFF00F8E775 /* XLActionController.framework */; };
 		7F00D33F1FB7903E00F8E775 /* PeriscopeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F00D33D1FB7903E00F8E775 /* PeriscopeCell.xib */; };
 		7F00D3431FB791F500F8E775 /* Periscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00D3421FB7916400F8E775 /* Periscope.swift */; };
+		7F00D3471FB7D43D00F8E775 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00D3461FB7D43D00F8E775 /* constants.swift */; };
+		7F00D34A1FB83DFB00F8E775 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00D3491FB83DFB00F8E775 /* DataService.swift */; };
 		7F0A00F31FB2EB9D002BC7C1 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A00F21FB2EB9D002BC7C1 /* SettingsVC.swift */; };
 		7F2378341FB279930078D7B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2378331FB279920078D7B3 /* Images.xcassets */; };
 		7F2378441FB27F190078D7B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2378431FB27F190078D7B3 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		7F00D3381FB78BFF00F8E775 /* XLActionController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLActionController.framework; path = Carthage/Build/iOS/XLActionController.framework; sourceTree = "<group>"; };
 		7F00D33D1FB7903E00F8E775 /* PeriscopeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeriscopeCell.xib; sourceTree = "<group>"; };
 		7F00D3421FB7916400F8E775 /* Periscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periscope.swift; sourceTree = "<group>"; };
+		7F00D3461FB7D43D00F8E775 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		7F00D3491FB83DFB00F8E775 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7F0A00F21FB2EB9D002BC7C1 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		7F2378331FB279920078D7B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7F2378431FB27F190078D7B3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +142,14 @@
 				7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */,
 			);
 			path = HomeMVC;
+			sourceTree = "<group>";
+		};
+		7F00D3481FB83DEA00F8E775 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7F00D3491FB83DFB00F8E775 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		7F23784B1FB27FAB0078D7B3 /* LoginMVC */ = {
@@ -227,6 +239,7 @@
 		B091DFDC1F85A4DC00BB9ACD /* Outings */ = {
 			isa = PBXGroup;
 			children = (
+				7F00D3481FB83DEA00F8E775 /* Services */,
 				7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */,
 				7F00D3451FB7AC6A00F8E775 /* HomeMVC */,
 				7F00D3441FB7AC4000F8E775 /* MapMVC */,
@@ -245,6 +258,7 @@
 				7F2378331FB279920078D7B3 /* Images.xcassets */,
 				B091DFE91F85A4DC00BB9ACD /* Info.plist */,
 				7F2D821E1FB2456900221743 /* GoogleService-Info.plist */,
+				7F00D3461FB7D43D00F8E775 /* constants.swift */,
 			);
 			path = Outings;
 			sourceTree = "<group>";
@@ -401,6 +415,7 @@
 			files = (
 				7FAB30A81FB67A2F00CA2119 /* ToggleBox.swift in Sources */,
 				B091DFE01F85A4DC00BB9ACD /* MapTestVC.swift in Sources */,
+				7F00D3471FB7D43D00F8E775 /* constants.swift in Sources */,
 				7FBE4B0D1FB2E8C2000C1F65 /* NotificationsVC.swift in Sources */,
 				7FAB30A51FB67A2F00CA2119 /* VisitAnnotation.swift in Sources */,
 				7FBE4B0B1FB2E505000C1F65 /* MapsVC.swift in Sources */,
@@ -413,6 +428,7 @@
 				7F2378461FB27F230078D7B3 /* LoginVC.swift in Sources */,
 				7FBD42FA1FB2BC610068B177 /* HomeVC.swift in Sources */,
 				7FAB30A91FB67A2F00CA2119 /* VisitCircle.swift in Sources */,
+				7F00D34A1FB83DFB00F8E775 /* DataService.swift in Sources */,
 				7FBE4B091FB2E409000C1F65 /* NavBar.swift in Sources */,
 				7FAB30A31FB67A2F00CA2119 /* Array.helpers.swift in Sources */,
 				7FAB30A61FB67A2F00CA2119 /* PathPolyline.swift in Sources */,
