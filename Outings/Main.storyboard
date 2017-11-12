@@ -186,18 +186,19 @@
                                     <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4f-B5-3w7" userLabel="View - socials">
                                         <rect key="frame" x="60.5" y="573" width="210" height="64"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcq-zz-gLS">
-                                                <rect key="frame" x="62" y="-8" width="86" height="86"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="CXx-VC-zKs">
+                                                <rect key="frame" x="75" y="2" width="60" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="210" id="OyN-hv-e2D"/>
-                                                    <constraint firstAttribute="height" constant="64" id="imb-ns-hge"/>
+                                                    <constraint firstAttribute="height" constant="60" id="qS1-Ex-fo8"/>
+                                                    <constraint firstAttribute="width" constant="60" id="y0C-Zf-Ay2"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="facebook"/>
-                                            </button>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="CXx-VC-zKs" firstAttribute="centerX" secondItem="W4f-B5-3w7" secondAttribute="centerX" id="8Dx-w5-ULU"/>
                                             <constraint firstAttribute="width" constant="210" id="Wj5-ty-Pk9"/>
+                                            <constraint firstItem="CXx-VC-zKs" firstAttribute="centerY" secondItem="W4f-B5-3w7" secondAttribute="centerY" id="lrT-P5-ht8"/>
                                             <constraint firstAttribute="height" constant="64" id="wkd-gO-WQh"/>
                                         </constraints>
                                     </view>
@@ -262,8 +263,6 @@
                     <connections>
                         <outlet property="backImageBottomConstraint" destination="yao-mt-9eu" id="Nd6-xd-OrM"/>
                         <outlet property="backImageLeftConstraint" destination="xdP-uF-cY9" id="iBL-oA-au6"/>
-                        <outlet property="facebookLoginClicked" destination="pcq-zz-gLS" id="dTh-On-m42"/>
-                        <outlet property="facebookSignupLogin" destination="pcq-zz-gLS" id="h4i-5E-p8E"/>
                         <outlet property="forgotPassTopConstraint" destination="H9V-hG-Zlq" id="cbh-I2-h88"/>
                         <outlet property="loginButton" destination="jXd-lF-yfE" id="jgk-fU-ncT"/>
                         <outlet property="loginButtonTopConstraint" destination="t1O-L1-35n" id="sl4-ed-QiO"/>
