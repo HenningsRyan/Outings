@@ -58,6 +58,7 @@ class LoginVC: UIViewController {
 	@IBOutlet weak var signupPasswordInputView: AMInputView!
 	@IBOutlet weak var signupPasswordConfirmInputView: AMInputView!
 	
+	@IBOutlet weak var facebookImg: UIImageView!
 	//MARK: - controller
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -67,6 +68,11 @@ class LoginVC: UIViewController {
 		
 		//add keyboard notification
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboarFrameChange(notification:)), name: .UIKeyboardWillChangeFrame, object: nil)
+		
+		//Facebook image action event
+		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(facebookTapped(tapGestureRecognizer:)))
+		facebookImg.isUserInteractionEnabled = true
+		facebookImg.addGestureRecognizer(tapGestureRecognizer)
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -142,6 +148,47 @@ class LoginVC: UIViewController {
 				})
 			}
 		}
+	}
+	
+	@objc func facebookTapped(tapGestureRecognizer: UITapGestureRecognizer)
+	{
+		
+		let fbLoginManager = FBSDKLoginManager()
+		fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+			if let error = error {
+				print("Failed to login: \(error.localizedDescription)")
+				return
+			}
+			
+			guard let accessToken = FBSDKAccessToken.current() else {
+				print("Failed to get access token")
+				return
+			}
+			
+			let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+			
+			// Perform login by calling Firebase APIs
+			Auth.auth().signIn(with: credential, completion: { (user, error) in
+				if let error = error {
+					print("Login error: \(error.localizedDescription)")
+					let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+					let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+					alertController.addAction(okayAction)
+					self.present(alertController, animated: true, completion: nil)
+					
+					return
+				}
+				
+				// Present the main view
+				if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+					UIApplication.shared.keyWindow?.rootViewController = viewController
+					self.dismiss(animated: true, completion: nil)
+				}
+				
+			})
+			
+		}
+		// Your action
 	}
 	
 	//MARK: - toggle view
