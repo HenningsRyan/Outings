@@ -12,6 +12,7 @@
 		7F00D3431FB791F500F8E775 /* Periscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00D3421FB7916400F8E775 /* Periscope.swift */; };
 		7F00D3471FB7D43D00F8E775 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00D3461FB7D43D00F8E775 /* constants.swift */; };
 		7F00D34A1FB83DFB00F8E775 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00D3491FB83DFB00F8E775 /* DataService.swift */; };
+		7F00D34E1FB8E20100F8E775 /* MapSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00D34D1FB8E20100F8E775 /* MapSearchVC.swift */; };
 		7F0A00F31FB2EB9D002BC7C1 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A00F21FB2EB9D002BC7C1 /* SettingsVC.swift */; };
 		7F2378341FB279930078D7B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2378331FB279920078D7B3 /* Images.xcassets */; };
 		7F2378441FB27F190078D7B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2378431FB27F190078D7B3 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		7F00D3421FB7916400F8E775 /* Periscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periscope.swift; sourceTree = "<group>"; };
 		7F00D3461FB7D43D00F8E775 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		7F00D3491FB83DFB00F8E775 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		7F00D34D1FB8E20100F8E775 /* MapSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchVC.swift; sourceTree = "<group>"; };
 		7F0A00F21FB2EB9D002BC7C1 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		7F2378331FB279920078D7B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7F2378431FB27F190078D7B3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				7F00D3481FB83DEA00F8E775 /* Services */,
 				7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */,
+				7F00D34D1FB8E20100F8E775 /* MapSearchVC.swift */,
 				7F00D3451FB7AC6A00F8E775 /* HomeMVC */,
 				7F00D3441FB7AC4000F8E775 /* MapMVC */,
 				7FFDCCD31FB4EE810097552C /* OutingModel.swift */,
@@ -420,6 +423,7 @@
 				7FAB30A51FB67A2F00CA2119 /* VisitAnnotation.swift in Sources */,
 				7FBE4B0B1FB2E505000C1F65 /* MapsVC.swift in Sources */,
 				7FAB30A21FB67A2F00CA2119 /* UIStackView.helpers.swift in Sources */,
+				7F00D34E1FB8E20100F8E775 /* MapSearchVC.swift in Sources */,
 				B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */,
 				7FA688BA1FB662F700850B42 /* MapStartVC.swift in Sources */,
 				7FA2FEB71FB40AFC000EE6CF /* HomeTableVC.swift in Sources */,
