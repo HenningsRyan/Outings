@@ -9,10 +9,11 @@ target 'Outings' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
+
   pod 'ArcKit'
+
   pod 'MGEvents', :inhibit_warnings => true
   pod 'Cartography', :inhibit_warnings => true
   pod 'XLActionController'
   pod 'XLActionController/Periscope'
-
 end

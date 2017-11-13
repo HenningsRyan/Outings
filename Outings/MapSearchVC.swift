@@ -56,47 +56,81 @@ class MapSearchVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegat
         snapOptions.region = mapView.region
         snapOptions.size = mapView.frame.size
         snapOptions.scale = UIScreen.main.scale
+
+        let fileURL = NSURL(fileURLWithPath: "/Users/ryanhennings/Desktop/snap8.png")
+        
+        let image = screenshot()
+//        image.crop(rect: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let data = UIImagePNGRepresentation(image.crop(rect: CGRect(x: view.center.x-200, y: view.center.y-200, width: 400, height: 400)))
+        try? data?.write(to: fileURL as URL)
+
+//        let snapshot = MKMapSnapshotter(options: snapOptions)
+
+//        snapshot.start(with: DispatchQueue.global(qos: .default)) { (snap, error) in
+//            guard let snap = snap else {
+//                print("RYAN: Snapshot error \(String(describing: error))")
+//                fatalError("RYAN: Image DispatchQueue Failed")
+//            }
+//
+//            let pin = MKPinAnnotationView(annotation: nil, reuseIdentifier: nil)
+//            let image = snap.image
+//
+//            UIGraphicsBeginImageContextWithOptions(image.size, true, image.scale)
+//            image.draw(at: CGPoint.zero)
+//
+//            let visibleRect = CGRect(origin: CGPoint.zero, size: image.size)
+//            for annotation in self.mapView.annotations {
+//                var point = snap.point(for: annotation.coordinate)
+//
+//                if visibleRect.contains(point) {
+//                    point.x = point.x + pin.centerOffset.x - (pin.bounds.size.width / 2)
+//                    point.y = point.y + pin.centerOffset.y - (pin.bounds.size.height / 2)
+//                    pin.image?.draw(at: point)
+//                }
+//            }
+//
+//            let completeImage = UIGraphicsGetImageFromCurrentImageContext()
+//            UIGraphicsEndImageContext()
+//
+//            let data = UIImagePNGRepresentation(completeImage!)
+//            try? data?.write(to: fileURL as URL)
+//
+//            print("RYAN: snap saved to /Users/ryanhennings/Desktop/snap2.png")
+//        }
+    }
     
-        let fileURL = NSURL(fileURLWithPath: "/Users/ryanhennings/Desktop/snap2.png")
-        
-        let snapshot = MKMapSnapshotter(options: snapOptions)
-        
-        snapshot.start(with: DispatchQueue.global(qos: .default)) { (snap, error) in
-            guard let snap = snap else {
-                print("RYAN: Snapshot error \(String(describing: error))")
-                fatalError("RYAN: Image DispatchQueue Failed")
-            }
-            
-            let pin = MKPinAnnotationView(annotation: nil, reuseIdentifier: nil)
-            let image = snap.image
-            
-            UIGraphicsBeginImageContextWithOptions(image.size, true, image.scale)
-            image.draw(at: CGPoint.zero)
-            
-            let visibleRect = CGRect(origin: CGPoint.zero, size: image.size)
-            for annotation in self.mapView.annotations {
-                var point = snap.point(for: annotation.coordinate)
-                
-                if visibleRect.contains(point) {
-                    point.x = point.x + pin.centerOffset.x - (pin.bounds.size.width / 2)
-                    point.y = point.y + pin.centerOffset.y - (pin.bounds.size.height / 2)
-                    pin.image?.draw(at: point)
+    // https://stackoverflow.com/a/41308750
+    func screenshot() -> UIImage {
+        let imageSize = UIScreen.main.bounds.size as CGSize;
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        for obj : AnyObject in UIApplication.shared.windows {
+            if let window = obj as? UIWindow {
+                if window.responds(to: #selector(getter: UIWindow.screen)) || window.screen == UIScreen.main {
+                    // so we must first apply the layer's geometry to the graphics context
+                    context!.saveGState();
+                    // Center the context around the window's anchor point
+                    context!.translateBy(x: window.center.x, y: window.center
+                        .y);
+                    // Apply the window's transform about the anchor point
+                    context!.concatenate(window.transform);
+                    // Offset by the portion of the bounds left of and above the anchor point
+                    context!.translateBy(x: -window.bounds.size.width * window.layer.anchorPoint.x,
+                                         y: -window.bounds.size.height * window.layer.anchorPoint.y);
+                    
+                    // Render the layer hierarchy to the current context
+                    window.layer.render(in: context!)
+                    
+                    // Restore the context
+                    context!.restoreGState();
                 }
             }
-            
-            let completeImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            
-            let data = UIImagePNGRepresentation(completeImage!)
-            try? data?.write(to: fileURL as URL)
-            
-            print("RYAN: snap saved to /Users/ryanhennings/Desktop/snap2.png")
         }
+        let image = UIGraphicsGetImageFromCurrentImageContext();
+        return image!
     }
 
-    
-    
-    
+
     // MARK: - Actions
     
     @objc func currentLocationButtonAction(_ sender: UIBarButtonItem) {
@@ -192,10 +226,23 @@ class MapSearchVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegat
         pointAnnotation.title = ""
         mapView.addAnnotation(pointAnnotation)
     }
-    
-    
-    
 }
+
+// https://stackoverflow.com/questions/39310729/problems-with-cropping-a-uiimage-in-swift
+extension UIImage {
+    func crop( rect: CGRect) -> UIImage {
+        var rect = rect
+        rect.origin.x*=self.scale
+        rect.origin.y*=self.scale
+        rect.size.width*=self.scale
+        rect.size.height*=self.scale
+        
+        let imageRef = self.cgImage!.cropping(to: rect)
+        let image = UIImage(cgImage: imageRef!, scale: self.scale, orientation: self.imageOrientation)
+        return image
+    }
+}
+
 
 
 

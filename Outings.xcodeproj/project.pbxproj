@@ -39,6 +39,7 @@
 		7FBE4B091FB2E409000C1F65 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B081FB2E409000C1F65 /* NavBar.swift */; };
 		7FBE4B0B1FB2E505000C1F65 /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B0A1FB2E505000C1F65 /* MapsVC.swift */; };
 		7FBE4B0D1FB2E8C2000C1F65 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B0C1FB2E8C2000C1F65 /* NotificationsVC.swift */; };
+		7FEA6F501FB96B8700D03C2D /* NewOutingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA6F4F1FB96B8700D03C2D /* NewOutingVC.swift */; };
 		7FFDCCD01FB44FBF0097552C /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */; };
 		7FFDCCD21FB4E9240097552C /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */; };
 		7FFDCCD41FB4EE810097552C /* OutingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDCCD31FB4EE810097552C /* OutingModel.swift */; };
@@ -48,6 +49,19 @@
 		B091DFE81F85A4DC00BB9ACD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B091DFE61F85A4DC00BB9ACD /* LaunchScreen.storyboard */; };
 		C2457AE3AB2811FA39F3D59E /* Pods_Outings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A9B269576CAC4BFF781997 /* Pods_Outings.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7F19253F1FB9690B00A292F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09A9B269576CAC4BFF781997 /* Pods_Outings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Outings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +100,7 @@
 		7FBE4B081FB2E409000C1F65 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		7FBE4B0A1FB2E505000C1F65 /* MapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
 		7FBE4B0C1FB2E8C2000C1F65 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
+		7FEA6F4F1FB96B8700D03C2D /* NewOutingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOutingVC.swift; sourceTree = "<group>"; };
 		7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		7FFDCCD31FB4EE810097552C /* OutingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutingModel.swift; sourceTree = "<group>"; };
@@ -256,6 +271,7 @@
 				B091DFDF1F85A4DC00BB9ACD /* MapTestVC.swift */,
 				7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */,
 				7F2378431FB27F190078D7B3 /* Main.storyboard */,
+				7FEA6F4F1FB96B8700D03C2D /* NewOutingVC.swift */,
 				B091DFE61F85A4DC00BB9ACD /* LaunchScreen.storyboard */,
 				B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */,
 				7F2378331FB279920078D7B3 /* Images.xcassets */,
@@ -280,6 +296,7 @@
 				B8A3EBF9AAA6A617AA407673 /* [CP] Embed Pods Frameworks */,
 				0767C52147FF77D8EC6BD96C /* [CP] Copy Pods Resources */,
 				7F00D33A1FB78C3A00F8E775 /* ShellScript */,
+				7F19253F1FB9690B00A292F8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -425,6 +442,7 @@
 				7FAB30A21FB67A2F00CA2119 /* UIStackView.helpers.swift in Sources */,
 				7F00D34E1FB8E20100F8E775 /* MapSearchVC.swift in Sources */,
 				B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */,
+				7FEA6F501FB96B8700D03C2D /* NewOutingVC.swift in Sources */,
 				7FA688BA1FB662F700850B42 /* MapStartVC.swift in Sources */,
 				7FA2FEB71FB40AFC000EE6CF /* HomeTableVC.swift in Sources */,
 				7FFDCCD21FB4E9240097552C /* HomeViewCell.swift in Sources */,
@@ -573,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FC1CAFC2DD965384BC6885A /* Pods-Outings.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6WA6Y7KBQJ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -586,6 +605,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -593,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C1C695030653DD44CA279E2 /* Pods-Outings.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6WA6Y7KBQJ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -606,6 +627,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

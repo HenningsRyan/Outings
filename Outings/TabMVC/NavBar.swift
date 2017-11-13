@@ -29,10 +29,19 @@ class NavBar: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
         
         let mapAddButton = UIButton(type: .system)
-        mapAddButton.setImage(#imageLiteral(resourceName: "map-pin"), for: .normal)
+        
+        mapAddButton.setImage(#imageLiteral(resourceName: "locationLine"), for: .normal)
         mapAddButton.tintColor = UIColor.white
         mapAddButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
+        
+        mapAddButton.addTarget(self, action: #selector(self.mapPressed), for: .touchUpInside)
+    }
+    
+    @objc func mapPressed(sender: UIButton!) {
+////        let rootVC = self.navigationController?.viewControllers.first
+////        rootVC?.performSegue(withIdentifier: "toOuting", sender: nil)
+        self.performSegue(withIdentifier: "toNewOuting", sender: nil)
     }
     
 
