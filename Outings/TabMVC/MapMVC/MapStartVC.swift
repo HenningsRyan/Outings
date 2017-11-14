@@ -17,7 +17,7 @@ import XLActionController
 class MapStartVC: UIViewController {
 //    @IBOutlet weak var startButtonLabel: UIButton!
 //    @IBOutlet weak var stopButtonLabel: UIButton!
-    @IBOutlet weak var mapNavBarButton: UIBarButtonItem!
+//    @IBOutlet weak var mapNavBarButton: UIBarButtonItem!
     
     var rawLocations: [CLLocation] = []
     var filteredLocations: [CLLocation] = []
@@ -30,6 +30,36 @@ class MapStartVC: UIViewController {
     public var appIsTracking = false
     
     // MARK: controller lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //        view.backgroundColor = .white
+        
+        //        startButtonLabel.imageView?.contentMode = .scaleAspectFit
+        //        stopButtonLabel.imageView?.contentMode = .scaleAspectFit
+        buildViewTree()
+        buildResultsViewTree()
+        
+        setUpNavigationBarItems()
+        
+        // the Core Location / Core Motion singleton
+        let loco = LocomotionManager.highlander
+        
+        // an API key is only necessary if you're using ActivityTypeClassifier
+        loco.apiKey = "13921b60be4611e7b6e021acca45d94f"
+        
+        let centre = NotificationCenter.default
+        
+        // observe incoming location / locomotion updates
+        centre.addObserver(forName: .locomotionSampleUpdated, object: loco, queue: OperationQueue.main) { note in
+            self.locomotionSampleUpdated(note: note)
+        }
+        
+        centre.addObserver(forName: .settingsChanged, object: settings, queue: OperationQueue.main) { _ in
+            self.updateTheMap()
+        }
+        loco.requestLocationPermission()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -39,7 +69,30 @@ class MapStartVC: UIViewController {
 //        tappedStart()
     }
     
-    @IBAction func mapTrackingTogglePressed(_ sender: UIButton) {
+    func setUpNavigationBarItems() {
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 70, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = titleImageView
+        
+        let userIconButton = UIButton(type: .system)
+        userIconButton.setImage(#imageLiteral(resourceName: "userExpand"), for: .normal)
+        userIconButton.tintColor = UIColor.white
+        //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
+        userIconButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
+        
+        let mapAddButton = UIButton(type: .system)
+        
+        mapAddButton.setImage(#imageLiteral(resourceName: "locationFill"), for: .normal)
+        mapAddButton.tintColor = UIColor.white
+        mapAddButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
+        
+        mapAddButton.addTarget(self, action: #selector(self.mapTrackingTogglePressed), for: .touchUpInside)
+    }
+    
+    @objc func mapTrackingTogglePressed(_ sender: UIButton) {
         let actionController = PeriscopeActionController()
         
         var imageFill = UIImage(named: "locationFill")
@@ -74,37 +127,6 @@ class MapStartVC: UIViewController {
         actionController.addAction(Action("Cancel", style: .cancel, handler: { action in
         }))
         present(actionController, animated: true, completion: nil)
-    }
-    
-    
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        view.backgroundColor = .white
-        
-//        startButtonLabel.imageView?.contentMode = .scaleAspectFit
-//        stopButtonLabel.imageView?.contentMode = .scaleAspectFit
-        buildViewTree()
-        buildResultsViewTree()
-        
-        // the Core Location / Core Motion singleton
-        let loco = LocomotionManager.highlander
-        
-        // an API key is only necessary if you're using ActivityTypeClassifier
-        loco.apiKey = "13921b60be4611e7b6e021acca45d94f"
-        
-        let centre = NotificationCenter.default
-        
-        // observe incoming location / locomotion updates
-        centre.addObserver(forName: .locomotionSampleUpdated, object: loco, queue: OperationQueue.main) { note in
-            self.locomotionSampleUpdated(note: note)
-        }
-        
-        centre.addObserver(forName: .settingsChanged, object: settings, queue: OperationQueue.main) { _ in
-            self.updateTheMap()
-        }
-        loco.requestLocationPermission()
     }
     
     // MARK: process incoming locations
