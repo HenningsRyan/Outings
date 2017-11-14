@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -294,10 +295,9 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--New Outing-->
+        <!--New OutingVC-->
         <scene sceneID="Y34-GG-1nq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fjL-3F-5cT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="0pU-FK-Q0F" customClass="NewOutingVC" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uAa-cJ-8iB"/>
@@ -306,12 +306,38 @@
                     <view key="view" contentMode="scaleToFill" id="cm0-Md-rg1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwT-K5-4sP">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.10235265640000001" green="0.63253134489999996" blue="0.82019448279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="XsG-kd-W6W"/>
+                                </constraints>
+                                <state key="normal" image="add">
+                                    <color key="titleColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="0pU-FK-Q0F" eventType="touchUpInside" id="X6A-Uk-uEd"/>
+                                    <action selector="getSnapshotPressed:" destination="Ll1-O3-Y7p" eventType="touchUpInside" id="5TR-uU-Wya"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jwT-K5-4sP" firstAttribute="leading" secondItem="cm0-Md-rg1" secondAttribute="leading" id="MD8-0g-rTG"/>
+                            <constraint firstAttribute="bottom" secondItem="jwT-K5-4sP" secondAttribute="bottom" id="Y8y-1S-uLC"/>
+                            <constraint firstAttribute="trailing" secondItem="jwT-K5-4sP" secondAttribute="trailing" id="cfj-Pk-kMv"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Outing" id="znb-4r-2i0"/>
+                    <navigationItem key="navigationItem" id="znb-4r-2i0"/>
+                    <connections>
+                        <outlet property="addOutingButtonLabel" destination="jwT-K5-4sP" id="hxM-JW-7aH"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjL-3F-5cT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5740" y="-215.44227886056973"/>
+            <point key="canvasLocation" x="5269.6000000000004" y="506.89655172413796"/>
         </scene>
         <!--Item-->
         <scene sceneID="Biv-cL-KXv">
@@ -413,7 +439,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qic-m7-Ohi">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1360853612" green="0.17230233549999999" blue="0.1932197809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.13725490196078433" green="0.17254901960784313" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Le3-2p-tQR">
@@ -521,7 +547,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zKJ-Ix-0II">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1360853612" green="0.17230233549999999" blue="0.1932197809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.13725490196078433" green="0.17254901960784313" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -536,9 +562,74 @@
             </objects>
             <point key="canvasLocation" x="4054" y="468"/>
         </scene>
+        <!--Map SearchVC-->
+        <scene sceneID="dG3-Oo-HRc">
+            <objects>
+                <viewController id="Ll1-O3-Y7p" customClass="MapSearchVC" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xpd-6U-lTn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YB2-H0-UmI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOl-Bz-sB3">
+                                <rect key="frame" x="87.5" y="577" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.10235265640000001" green="0.63253134489999996" blue="0.82019448279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="a7p-nw-adg"/>
+                                </constraints>
+                                <state key="normal" title="Get Snap Shot">
+                                    <color key="titleColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getSnapshotPressed:" destination="Ll1-O3-Y7p" eventType="touchUpInside" id="OWW-hD-yay"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YB2-H0-UmI" firstAttribute="leading" secondItem="ZFH-9i-4sg" secondAttribute="leading" id="CQk-jM-ymy"/>
+                            <constraint firstItem="BOl-Bz-sB3" firstAttribute="centerX" secondItem="Xpd-6U-lTn" secondAttribute="centerX" id="RuG-fA-uRD"/>
+                            <constraint firstItem="ZFH-9i-4sg" firstAttribute="bottom" secondItem="BOl-Bz-sB3" secondAttribute="bottom" constant="60" id="e6U-au-iji"/>
+                            <constraint firstItem="YB2-H0-UmI" firstAttribute="trailing" secondItem="ZFH-9i-4sg" secondAttribute="trailing" id="j8f-XL-Fof"/>
+                            <constraint firstItem="YB2-H0-UmI" firstAttribute="bottom" secondItem="ZFH-9i-4sg" secondAttribute="bottom" id="kD6-V5-hYA"/>
+                            <constraint firstItem="YB2-H0-UmI" firstAttribute="top" secondItem="Xpd-6U-lTn" secondAttribute="top" id="uaN-BX-esd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZFH-9i-4sg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wKS-xa-9sZ"/>
+                    <connections>
+                        <outlet property="mapView" destination="YB2-H0-UmI" id="fiu-Y1-qRl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwC-Y6-wBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7072.8000000000002" y="506.89655172413796"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EWI-Nv-nkP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xzf-e4-Rmh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lgC-uE-dpb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ll1-O3-Y7p" kind="relationship" relationship="rootViewController" id="4sX-P9-vhm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUf-8H-5yT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6298" y="507"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Notification" width="28" height="30"/>
+        <image name="add" width="32" height="32"/>
         <image name="backImage" width="558" height="549"/>
         <image name="facebook" width="256" height="256"/>
         <image name="gear2" width="30" height="30"/>
@@ -551,6 +642,6 @@
         <image name="notificationFill" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3GS-Ch-UDi"/>
+        <segue reference="tPa-hj-RM2"/>
     </inferredMetricsTieBreakers>
 </document>

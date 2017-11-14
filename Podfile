@@ -16,4 +16,8 @@ target 'Outings' do
   pod 'Cartography', :inhibit_warnings => true
   pod 'XLActionController'
   pod 'XLActionController/Periscope'
+
+  pod 'Eureka'
+
+
 end

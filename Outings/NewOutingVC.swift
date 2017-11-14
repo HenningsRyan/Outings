@@ -8,6 +8,7 @@
 //  https://github.com/xmartlabs/eureka
 
 import UIKit
+import CoreLocation
 import Eureka
 
 class NewOutingNavController: UINavigationController, RowControllerType {
@@ -19,9 +20,42 @@ class NewOutingNavController: UINavigationController, RowControllerType {
 
 class NewOutingVC: FormViewController {
     
+    
+    @IBOutlet weak var addOutingButtonLabel: UIButton!
+    
+    // MARK: - Form data field vars
+    private var outingTitle: String?
+    
+    private var dateTimeValue: Date?
+    private var toggleSwitch: Bool?
+    private var location: CLLocation?
+    private var lattitude: String?
+    private var longitude: String?
+    private var userImageUpload: UIImage?
+    private var locationDescription: String?
+    
+    
+    var locationSelected = "Current Location"
+    
+    private var locationManager: CLLocationManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Add top logo
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 70, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = titleImageView
+        
+        // Initialize Varibles sent to Firestore
+        dateTimeValue = Date()
+        toggleSwitch = true
+        location = CLLocationManager().location
+        lattitude = String(format: "%f", (location?.coordinate.latitude)!)
+        longitude = String(format: "%f", (location?.coordinate.longitude)!)
+        
+        // Back Button
         let buttonOptions = UIButton(type: .system)
         buttonOptions.setImage(#imageLiteral(resourceName: "backButton"), for: .normal)
         buttonOptions.setTitle(" Back", for: .normal)
@@ -29,17 +63,12 @@ class NewOutingVC: FormViewController {
         buttonOptions.setTitleColor(.white, for: .normal)
         buttonOptions.tintColor = .white
         buttonOptions.addTarget(self, action: #selector(backAction), for: .touchUpInside)
-
         let backNavButton = UIBarButtonItem(customView: buttonOptions)
-        
         navigationItem.leftBarButtonItem = backNavButton
-//        self.addBackButton()
         
-//        backButtonLabel.tintColor = .white
-//        backButtonLabel.setTitle("Back", for: .normal)
-//        backButtonLabel.setImage(#imageLiteral(resourceName: "backButton"), for: .normal)
-//        backButtonLabel.setTitleColor(.white, for: .normal)
-
+        // Add Outing Button
+        self.view.bringSubview(toFront: addOutingButtonLabel)
+        
         initializeForm()
     }
     
@@ -54,242 +83,90 @@ class NewOutingVC: FormViewController {
         self.view.window!.layer.add(transition, forKey: nil)
         self.dismiss(animated: false, completion: nil)
     }
-
     
+    @IBAction func addButtonPressed(_ sender: UIButton) {
+        let fullDate = dateTimeValue?.description.components(separatedBy: " ")
+        
+        if let dateTime = fullDate,
+            let hours = Calendar.current.dateComponents(in: TimeZone.current, from: dateTimeValue!).hour,
+            let minutes = Calendar.current.dateComponents(in: TimeZone.current, from: dateTimeValue!).minute {
+            let time = "\(hours):\(minutes)"
+            print("RYAN: Date   -        \(dateTime[0])")
+            print("RYAN: Time   -        \(time)")
+        } else {
+            print("RYAN: date unwrap failed")
+        }
+        
+        print("RYAN: Title           \(String(describing: outingTitle))")
+        print("RYAN: Toggle switch - \(String(describing: toggleSwitch))")
+        
+        print("RYAN: Latittude       \(String(describing: lattitude))")
+        print("RYAN: Logitude        \(String(describing: longitude))")
+        print("RYAN: Location Desc   \(String(describing: locationDescription))")
+    }
+    
+    // MARK: - Init Eureka Form
     private func initializeForm() {
-        
         form +++
             
-            TextRow("Title").cellSetup { cell, row in
-                cell.textField.placeholder = row.tag
-            }
-            
-            <<< TextRow("Location").cellSetup {
-                $1.cell.textField.placeholder = $0.row.tag
-            }
-            
-            +++
-            
-            SwitchRow("All-day") {
-                $0.title = $0.tag
-                }.onChange { [weak self] row in
-                    let startDate: DateTimeInlineRow! = self?.form.rowBy(tag: "Starts")
-                    let endDate: DateTimeInlineRow! = self?.form.rowBy(tag: "Ends")
-                    
-                    if row.value ?? false {
-                        startDate.dateFormatter?.dateStyle = .medium
-                        startDate.dateFormatter?.timeStyle = .none
-                        endDate.dateFormatter?.dateStyle = .medium
-                        endDate.dateFormatter?.timeStyle = .none
-                    }
-                    else {
-                        startDate.dateFormatter?.dateStyle = .short
-                        startDate.dateFormatter?.timeStyle = .short
-                        endDate.dateFormatter?.dateStyle = .short
-                        endDate.dateFormatter?.timeStyle = .short
-                    }
-                    startDate.updateCell()
-                    endDate.updateCell()
-                    startDate.inlineRow?.updateCell()
-                    endDate.inlineRow?.updateCell()
-            }
-            
-            <<< DateTimeInlineRow("Starts") {
-                $0.title = $0.tag
-                $0.value = Date().addingTimeInterval(60*60*24)
+        Section("New Outing Information")
+        
+        // Title Field
+        <<< TextRow("Title").cellSetup { cell, row in
+            cell.textField.placeholder = row.tag
+            }.onChange({ (row) in
+                self.outingTitle = row.value
+            })
+        
+        +++ Section()
+        
+        // Toggle Button
+        <<< SwitchRow("Allow Friends to Join") {
+            $0.title = $0.tag
+            $0.value = true
+            }.onChange { row in // add [weak self] for modifing outside of handler
+                if row.value ?? false {
+                    self.toggleSwitch = true
                 }
-                .onChange { [weak self] row in
-                    let endRow: DateTimeInlineRow! = self?.form.rowBy(tag: "Ends")
-                    if row.value?.compare(endRow.value!) == .orderedDescending {
-                        endRow.value = Date(timeInterval: 60*60*24, since: row.value!)
-                        endRow.cell!.backgroundColor = .white
-                        endRow.updateCell()
-                    }
+                else {
+                    self.toggleSwitch = false
                 }
-                .onExpandInlineRow { [weak self] cell, row, inlineRow in
-                    inlineRow.cellUpdate() { cell, row in
-                        let allRow: SwitchRow! = self?.form.rowBy(tag: "All-day")
-                        if allRow.value ?? false {
-                            cell.datePicker.datePickerMode = .date
-                        }
-                        else {
-                            cell.datePicker.datePickerMode = .dateAndTime
-                        }
-                    }
-                    let color = cell.detailTextLabel?.textColor
-                    row.onCollapseInlineRow { cell, _, _ in
-                        cell.detailTextLabel?.textColor = color
-                    }
-                    cell.detailTextLabel?.textColor = cell.tintColor
-            }
-            
-            <<< DateTimeInlineRow("Ends"){
-                $0.title = $0.tag
-                $0.value = Date().addingTimeInterval(60*60*25)
-                }
-                .onChange { [weak self] row in
-                    let startRow: DateTimeInlineRow! = self?.form.rowBy(tag: "Starts")
-                    if row.value?.compare(startRow.value!) == .orderedAscending {
-                        row.cell!.backgroundColor = .red
-                    }
-                    else{
-                        row.cell!.backgroundColor = .white
-                    }
-                    row.updateCell()
-                }
-                .onExpandInlineRow { [weak self] cell, row, inlineRow in
-                    inlineRow.cellUpdate { cell, dateRow in
-                        let allRow: SwitchRow! = self?.form.rowBy(tag: "All-day")
-                        if allRow.value ?? false {
-                            cell.datePicker.datePickerMode = .date
-                        }
-                        else {
-                            cell.datePicker.datePickerMode = .dateAndTime
-                        }
-                    }
-                    let color = cell.detailTextLabel?.textColor
-                    row.onCollapseInlineRow { cell, _, _ in
-                        cell.detailTextLabel?.textColor = color
-                    }
-                    cell.detailTextLabel?.textColor = cell.tintColor
         }
         
-        form +++
-            
-            PushRow<RepeatInterval>("Repeat") {
-                $0.title = $0.tag
-                $0.options = RepeatInterval.allValues
-                $0.value = .Never
-                }.onPresent({ (_, vc) in
-                    vc.enableDeselection = false
-                    vc.dismissOnSelection = false
-                })
-        
-        form +++
-            
-            PushRow<EventAlert>() {
-                $0.title = "Alert"
-                $0.options = EventAlert.allValues
-                $0.value = .Never
-                }
-                .onChange { [weak self] row in
-                    if row.value == .Never {
-                        if let second : PushRow<EventAlert> = self?.form.rowBy(tag: "Another Alert"), let secondIndexPath = second.indexPath {
-                            row.section?.remove(at: secondIndexPath.row)
-                        }
-                    }
-                    else{
-                        guard let _ : PushRow<EventAlert> = self?.form.rowBy(tag: "Another Alert") else {
-                            let second = PushRow<EventAlert>("Another Alert") {
-                                $0.title = $0.tag
-                                $0.value = .Never
-                                $0.options = EventAlert.allValues
-                            }
-                            row.section?.insert(second, at: row.indexPath!.row + 1)
-                            return
-                        }
-                    }
-        }
-        
-        form +++
-            
-            PushRow<EventState>("Show As") {
-                $0.title = "Show As"
-                $0.options = EventState.allValues
-        }
-        
-        form +++
-            
-            URLRow("URL") {
-                $0.placeholder = "URL"
+        // Date/Time Field
+        <<< DateTimeInlineRow("Date and Time") {
+            $0.title = $0.tag
+            $0.value = Date().addingTimeInterval(60*60*24)
+            }.onChange({ (dateTime) in
+                self.dateTimeValue = dateTime.value
+            })
+    
+        <<< LocationRow() {
+            $0.title = "Current Location"
+            if locationManager == nil {
+                locationManager = CLLocationManager()
             }
-            
-            <<< TextAreaRow("notes") {
-                $0.placeholder = "Notes"
-                $0.textAreaHeight = .dynamic(initialTextViewHeight: 50)
-        }
+            locationManager?.requestWhenInUseAuthorization()
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            $0.value = locationManager.location
+            }.onChange({ (row) in
+                self.location = row.value
+                self.locationDescription = row.title
+            })
         
+        +++ Section("Add Image to Outing")
+        
+        <<< ImageRow() {
+            $0.title = "Custom Image"
+            }.onChange({ (image) in
+                self.userImageUpload = image.value
+            })
+        
+            // TODO: - Add Estimated time field
     }
-    
-//    @objc func cancelTapped(_ barButtonItem: UIBarButtonItem) {
-//        (navigationController as? NewOutingNavController)?.onDismissCallback?(self)
-//    }
-    
-    enum RepeatInterval : String, CustomStringConvertible {
-        case Never = "Never"
-        case Every_Day = "Every Day"
-        case Every_Week = "Every Week"
-        case Every_2_Weeks = "Every 2 Weeks"
-        case Every_Month = "Every Month"
-        case Every_Year = "Every Year"
-        
-        var description : String { return rawValue }
-        
-        static let allValues = [Never, Every_Day, Every_Week, Every_2_Weeks, Every_Month, Every_Year]
-    }
-    
-    enum EventAlert : String, CustomStringConvertible {
-        case Never = "None"
-        case At_time_of_event = "At time of event"
-        case Five_Minutes = "5 minutes before"
-        case FifTeen_Minutes = "15 minutes before"
-        case Half_Hour = "30 minutes before"
-        case One_Hour = "1 hour before"
-        case Two_Hour = "2 hours before"
-        case One_Day = "1 day before"
-        case Two_Days = "2 days before"
-        
-        var description : String { return rawValue }
-        
-        static let allValues = [Never, At_time_of_event, Five_Minutes, FifTeen_Minutes, Half_Hour, One_Hour, Two_Hour, One_Day, Two_Days]
-    }
-    
-    enum EventState {
-        case busy
-        case free
-        
-        static let allValues = [busy, free]
-    }
+
 }
 
-// https://stackoverflow.com/a/46215325
-//extension UIViewController {
-//    func addBackButton() {
-//        let btnLeftMenu: UIButton = UIButton()
-//        let image = UIImage(named: "backButton")
-//        btnLeftMenu.setImage(image, for: .normal)
-//        btnLeftMenu.setTitle("Back".localizedCapitalized, for: .normal);
-//        btnLeftMenu.sizeToFit()
-//        btnLeftMenu.addTarget(self, action: #selector (backButtonClick(sender:)), for: .touchUpInside)
-//        let barButton = UIBarButtonItem(customView: btnLeftMenu)
-//        self.navigationItem.leftBarButtonItem = barButton
-//    }
-//
-//    @objc func backButtonClick(sender : UIButton) {
-//        self.navigationController?.popViewController(animated: true);
-//    }
-//}
 
-// https://stackoverflow.com/a/35574014
-class SegueFromRight: UIStoryboardSegue
-{
-    override func perform()
-    {
-        let src = self.source
-        let dst = self.destination
-        
-        src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
-        dst.view.transform = CGAffineTransform(translationX: src.view.frame.size.width, y: 0)
-        
-        UIView.animate(withDuration: 0.25,
-                                   delay: 0.0,
-                                   options: UIViewAnimationOptions.curveEaseInOut,
-                                   animations: {
-                                    dst.view.transform = CGAffineTransform(translationX: 0, y: 0)
-        },
-                                   completion: { finished in
-                                    src.present(dst, animated: false, completion: nil)
-        }
-        )
-    }
-}
