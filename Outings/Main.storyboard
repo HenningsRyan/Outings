@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -357,7 +356,7 @@
                     <navigationItem key="navigationItem" id="Yh7-wp-mav"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="W6s-K7-4v9" kind="show" identifier="toNewOuting" customClass="SegueFromRight" customModule="Outings" customModuleProvider="target" id="tPa-hj-RM2"/>
+                        <segue destination="W6s-K7-4v9" kind="showDetail" identifier="toNewOuting" action="showViewController:sender:" id="tPa-hj-RM2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gV-Gx-HRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -379,7 +378,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="J40-dl-nbM"/>
                     <connections>
-                        <segue destination="W6s-K7-4v9" kind="show" identifier="toNewOuting" customClass="SegueFromRight" customModule="Outings" customModuleProvider="target" id="syh-vI-JKO"/>
+                        <segue destination="W6s-K7-4v9" kind="showDetail" identifier="toNewOuting" action="showViewController:sender:" id="syh-vI-JKO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0IU-Y8-xGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -470,7 +469,7 @@
                     <navigationItem key="navigationItem" id="2fg-HI-a5A"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="W6s-K7-4v9" kind="show" identifier="toNewOuting" customClass="SegueFromRight" customModule="Outings" customModuleProvider="target" id="ilV-eR-V06"/>
+                        <segue destination="W6s-K7-4v9" kind="showDetail" identifier="toNewOuting" action="showViewController:sender:" id="ilV-eR-V06"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvH-pk-Twh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -493,7 +492,7 @@
                     <navigationItem key="navigationItem" id="Dzz-6B-YJB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="W6s-K7-4v9" kind="show" identifier="toNewOuting" customClass="SegueFromRight" customModule="Outings" customModuleProvider="target" id="3GS-Ch-UDi"/>
+                        <segue destination="W6s-K7-4v9" kind="showDetail" identifier="toNewOuting" action="showViewController:sender:" id="3GS-Ch-UDi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwl-K9-pep" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -561,7 +560,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZL8-j8-M7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4054" y="468"/>
+            <point key="canvasLocation" x="4346" y="534"/>
         </scene>
         <!--Map SearchVC-->
         <scene sceneID="dG3-Oo-HRc">
@@ -643,6 +642,6 @@
         <image name="notificationFill" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tPa-hj-RM2"/>
+        <segue reference="syh-vI-JKO"/>
     </inferredMetricsTieBreakers>
 </document>
