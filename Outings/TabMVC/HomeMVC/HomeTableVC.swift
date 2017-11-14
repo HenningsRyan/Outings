@@ -15,6 +15,9 @@ class HomeTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpNavigationBarItems()
+        
+        
         self.tableView.backgroundColor = UIColor(hexString: "1A79AC")
         tableView.separatorStyle = .none
         let o1 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennings", date: "11/21/17", info: "Mission Peak Hike!")
@@ -132,6 +135,33 @@ class HomeTableVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func setUpNavigationBarItems() {
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 70, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = titleImageView
+        
+        let userIconButton = UIButton(type: .system)
+        userIconButton.setImage(#imageLiteral(resourceName: "userExpand"), for: .normal)
+        userIconButton.tintColor = UIColor.white
+        //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
+        userIconButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
+        
+        let mapAddButton = UIButton(type: .system)
+        
+        mapAddButton.setImage(#imageLiteral(resourceName: "locationLine"), for: .normal)
+        mapAddButton.tintColor = UIColor.white
+        mapAddButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
+        
+        mapAddButton.addTarget(self, action: #selector(self.mapPressed), for: .touchUpInside)
+    }
+    
+    @objc func mapPressed(sender: UIButton!) {
+        self.performSegue(withIdentifier: "toNewOuting", sender: nil)
+    }
 
 }
 

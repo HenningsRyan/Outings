@@ -168,6 +168,8 @@
 		7F00D3441FB7AC4000F8E775 /* MapMVC */ = {
 			isa = PBXGroup;
 			children = (
+				7F00D3411FB7915100F8E775 /* ToggleActionController */,
+				7FAB30AB1FB67A5200CA2119 /* ArcKit */,
 				7FA688B91FB662F700850B42 /* MapStartVC.swift */,
 			);
 			path = MapMVC;
@@ -185,6 +187,7 @@
 		7F00D3481FB83DEA00F8E775 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7FFDCCD31FB4EE810097552C /* OutingModel.swift */,
 				7F00D3491FB83DFB00F8E775 /* DataService.swift */,
 			);
 			path = Services;
@@ -193,6 +196,7 @@
 		7F012D201FBA401D00EE3689 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7F2F52051FBA8E8300D4DFBC /* EurekaFormHelpers */,
 				7F00D3461FB7D43D00F8E775 /* constants.swift */,
 				7F012D211FBA403F00EE3689 /* CustomSegues.swift */,
 			);
@@ -271,6 +275,9 @@
 		7FBD42F81FB2BC080068B177 /* TabMVC */ = {
 			isa = PBXGroup;
 			children = (
+				7F00D3441FB7AC4000F8E775 /* MapMVC */,
+				7F00D3451FB7AC6A00F8E775 /* HomeMVC */,
+				7FEA6F4F1FB96B8700D03C2D /* NewOutingVC.swift */,
 				7FAB30AE1FB69E1A00CA2119 /* NavController.swift */,
 				7FBE4B081FB2E409000C1F65 /* NavBar.swift */,
 				7FBD42F91FB2BC610068B177 /* HomeVC.swift */,
@@ -302,19 +309,12 @@
 		B091DFDC1F85A4DC00BB9ACD /* Outings */ = {
 			isa = PBXGroup;
 			children = (
-				7FEA6F4F1FB96B8700D03C2D /* NewOutingVC.swift */,
-				7FFDCCD31FB4EE810097552C /* OutingModel.swift */,
 				7F2378431FB27F190078D7B3 /* Main.storyboard */,
 				7F00D3481FB83DEA00F8E775 /* Services */,
-				7F00D3451FB7AC6A00F8E775 /* HomeMVC */,
-				7F00D3441FB7AC4000F8E775 /* MapMVC */,
-				7F00D3411FB7915100F8E775 /* ToggleActionController */,
-				7FAB30AB1FB67A5200CA2119 /* ArcKit */,
 				7F23784B1FB27FAB0078D7B3 /* LoginMVC */,
 				7FBD42F81FB2BC080068B177 /* TabMVC */,
 				7FB222BC1FBA687700F6E506 /* Prototyping */,
 				7F012D201FBA401D00EE3689 /* Helpers */,
-				7F2F52051FBA8E8300D4DFBC /* EurekaFormHelpers */,
 				B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */,
 				B091DFE61F85A4DC00BB9ACD /* LaunchScreen.storyboard */,
 				B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */,

@@ -25,14 +25,14 @@ class NavBar: UIViewController {
         userIconButton.setImage(#imageLiteral(resourceName: "userExpand"), for: .normal)
         userIconButton.tintColor = UIColor.white
         //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
-        userIconButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        userIconButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
         
         let mapAddButton = UIButton(type: .system)
         
         mapAddButton.setImage(#imageLiteral(resourceName: "locationLine"), for: .normal)
         mapAddButton.tintColor = UIColor.white
-        mapAddButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        mapAddButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
         
         mapAddButton.addTarget(self, action: #selector(self.mapPressed), for: .touchUpInside)

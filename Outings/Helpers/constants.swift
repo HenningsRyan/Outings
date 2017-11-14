@@ -10,4 +10,5 @@ import UIKit
 
 class constants {
     static let edgeDistance: CGFloat = 75
+    static let iconSize: CGFloat = 20
 }
