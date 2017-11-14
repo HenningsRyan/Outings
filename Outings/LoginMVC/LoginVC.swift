@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
 
 enum AMLoginSignupViewMode {
     case login
@@ -48,6 +49,7 @@ class LoginVC: UIViewController {
    
     @IBOutlet weak var forgotPassTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var socialsView: UIView!
+    @IBOutlet weak var facebookImg: UIImageView!
     
     //MARK: - input views
     @IBOutlet weak var loginEmailInputView: AMInputView!
@@ -64,15 +66,66 @@ class LoginVC: UIViewController {
         
         //add keyboard notification
          NotificationCenter.default.addObserver(self, selector: #selector(keyboarFrameChange(notification:)), name: .UIKeyboardWillChangeFrame, object: nil)
+        
+        //Facebook image action event
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(facebookTapped(tapGestureRecognizer:)))
+        facebookImg.isUserInteractionEnabled = true
+        facebookImg.addGestureRecognizer(tapGestureRecognizer)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    //MARK: Ryan - Sign in
+    //MARK: Ryan - FB Sign in
+    @objc func facebookTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        
+        let fbLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+            if let error = error {
+                print("Failed to login: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let accessToken = FBSDKAccessToken.current() else {
+                print("Failed to get access token")
+                return
+            }
+            
+            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+            
+            // Perform login by calling Firebase APIs
+            Auth.auth().signIn(with: credential, completion: { (user, error) in
+                if let error = error {
+                    print("Login error: \(error.localizedDescription)")
+                    let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(okayAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                    return
+                }
+                else{
+                    //MARK: FB User Authenticated
+                    print("RYAN: Firebase FB User Authenticated")
+                    if let userID = user?.uid,
+                        let provider = user?.providerID,
+                        let emailAddr = user?.email,
+                        let username = user?.displayName {
+                        let userData = [
+                            "provider": provider,
+                            "email": emailAddr,
+                            "username": username]
+                        self.completeSignIn(id: userID, userData: userData)
+                    } else {
+                        print("RYAN: Failed to Segue Home")
+                    }
+                }
+            }) // End Completion Handle
+        }
+    }
     
-
     //MARK: - button actions
     @IBAction func loginButtonTouchUpInside(_ sender: AnyObject) {
         if mode == .signup { toggleViewMode(animated: true) }
@@ -201,6 +254,7 @@ class LoginVC: UIViewController {
             self.signupButton.transform = transformSignup
         }
     }
+    
     
     //MARK: - keyboard
     @objc func keyboarFrameChange(notification:NSNotification){

@@ -1,5 +1,11 @@
 PODS:
   - ArcKit (2.1.0)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
   - BoringSSL (9.1):
     - BoringSSL/Implementation (= 9.1)
     - BoringSSL/Interface (= 9.1)
@@ -8,6 +14,10 @@ PODS:
   - BoringSSL/Interface (9.1)
   - Cartography (3.0.0)
   - Eureka (4.0.1)
+  - FBSDKCoreKit (4.28.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.28.0):
+    - FBSDKCoreKit
   - Firebase/Auth (4.5.0):
     - Firebase/Core
     - FirebaseAuth (= 4.3.1)
@@ -83,8 +93,11 @@ PODS:
 
 DEPENDENCIES:
   - ArcKit
+  - Bolts
   - Cartography
   - Eureka
+  - FBSDKCoreKit
+  - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
@@ -94,9 +107,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ArcKit: 6d3db1217dfbcffc6116a0b926c8bf8c0ec86988
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   BoringSSL: 84318770d120503ab1a6aaf1df777c5ca053697e
   Cartography: 105643267226a7ab58895b94b44727eb013e31ce
   Eureka: c8bd5cc07143b6f66268c208d28a246c99b41955
+  FBSDKCoreKit: ca961e279113f691fd83dc634c0bbad9d4e3f370
+  FBSDKLoginKit: b077381c27d800f21661757e8140cf2c80a91e4a
   Firebase: d83d287bdb6b1c78320561482706d1fcfc8ddfc1
   FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
   FirebaseAuth: e7c2b1359c2df4af23a568100a8eace0b8c507e4
@@ -115,6 +131,6 @@ SPEC CHECKSUMS:
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   XLActionController: 7e88fece1799e61357cb00b1cc67104d66ec4d2c
 
-PODFILE CHECKSUM: d0d0275217137941c9895ad2a9ee387ab6b172b7
+PODFILE CHECKSUM: 41b78facc1217ca35a2c5b419e8c2ed182f12079
 
 COCOAPODS: 1.1.1

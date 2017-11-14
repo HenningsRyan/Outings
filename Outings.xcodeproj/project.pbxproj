@@ -302,16 +302,9 @@
 		B091DFDC1F85A4DC00BB9ACD /* Outings */ = {
 			isa = PBXGroup;
 			children = (
-				7F2F52051FBA8E8300D4DFBC /* EurekaFormHelpers */,
 				7FEA6F4F1FB96B8700D03C2D /* NewOutingVC.swift */,
 				7FFDCCD31FB4EE810097552C /* OutingModel.swift */,
-				B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */,
 				7F2378431FB27F190078D7B3 /* Main.storyboard */,
-				B091DFE61F85A4DC00BB9ACD /* LaunchScreen.storyboard */,
-				B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */,
-				7F2378331FB279920078D7B3 /* Images.xcassets */,
-				B091DFE91F85A4DC00BB9ACD /* Info.plist */,
-				7F2D821E1FB2456900221743 /* GoogleService-Info.plist */,
 				7F00D3481FB83DEA00F8E775 /* Services */,
 				7F00D3451FB7AC6A00F8E775 /* HomeMVC */,
 				7F00D3441FB7AC4000F8E775 /* MapMVC */,
@@ -321,6 +314,13 @@
 				7FBD42F81FB2BC080068B177 /* TabMVC */,
 				7FB222BC1FBA687700F6E506 /* Prototyping */,
 				7F012D201FBA401D00EE3689 /* Helpers */,
+				7F2F52051FBA8E8300D4DFBC /* EurekaFormHelpers */,
+				B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */,
+				B091DFE61F85A4DC00BB9ACD /* LaunchScreen.storyboard */,
+				B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */,
+				7F2378331FB279920078D7B3 /* Images.xcassets */,
+				B091DFE91F85A4DC00BB9ACD /* Info.plist */,
+				7F2D821E1FB2456900221743 /* GoogleService-Info.plist */,
 			);
 			path = Outings;
 			sourceTree = "<group>";
@@ -648,9 +648,10 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(SRCROOT)",
+					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = Outings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = outingsco.Outings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -673,9 +674,10 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(SRCROOT)",
+					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = Outings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = outingsco.Outings;
 				PRODUCT_NAME = "$(TARGET_NAME)";

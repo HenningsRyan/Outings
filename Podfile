@@ -19,5 +19,9 @@ target 'Outings' do
 
   pod 'Eureka'
 
+  pod 'Bolts'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+
 
 end

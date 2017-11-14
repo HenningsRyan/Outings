@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HR6-a9-IS7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -264,6 +264,7 @@
                     <connections>
                         <outlet property="backImageBottomConstraint" destination="yao-mt-9eu" id="Nd6-xd-OrM"/>
                         <outlet property="backImageLeftConstraint" destination="xdP-uF-cY9" id="iBL-oA-au6"/>
+                        <outlet property="facebookImg" destination="CXx-VC-zKs" id="IRc-bh-fGv"/>
                         <outlet property="forgotPassTopConstraint" destination="H9V-hG-Zlq" id="cbh-I2-h88"/>
                         <outlet property="loginButton" destination="jXd-lF-yfE" id="jgk-fU-ncT"/>
                         <outlet property="loginButtonTopConstraint" destination="t1O-L1-35n" id="sl4-ed-QiO"/>

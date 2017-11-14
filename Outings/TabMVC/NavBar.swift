@@ -39,20 +39,6 @@ class NavBar: UIViewController {
     }
     
     @objc func mapPressed(sender: UIButton!) {
-////        let rootVC = self.navigationController?.viewControllers.first
-////        rootVC?.performSegue(withIdentifier: "toOuting", sender: nil)
         self.performSegue(withIdentifier: "toNewOuting", sender: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

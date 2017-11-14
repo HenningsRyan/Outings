@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FBSDKCoreKit.framework">
+   </FileRef>
+   <FileRef
+      location = "group:FBSDKLoginKit.framework">
+   </FileRef>
+   <FileRef
       location = "group:Outings.xcodeproj">
    </FileRef>
    <FileRef
