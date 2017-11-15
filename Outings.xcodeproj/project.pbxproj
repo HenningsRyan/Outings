@@ -646,7 +646,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(SRCROOT)",
 					"~/Documents/FacebookSDK",
 				);
@@ -672,7 +671,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(SRCROOT)",
 					"~/Documents/FacebookSDK",
 				);
