@@ -25,6 +25,7 @@
 		7F2F52041FBA8DF100D4DFBC /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F52021FBA8DF100D4DFBC /* ImageRow.swift */; };
 		7F6983AF1F8EB61E00064CD8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6983AE1F8EB61E00064CD8 /* MapKit.framework */; };
 		7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */; };
+		7F8B5CBE1FBCE78500BF88E9 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8B5CBD1FBCE78500BF88E9 /* ProfileVC.swift */; };
 		7FA2FEB71FB40AFC000EE6CF /* HomeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */; };
 		7FA688BA1FB662F700850B42 /* MapStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688B91FB662F700850B42 /* MapStartVC.swift */; };
 		7FAB30A01FB67A2F00CA2119 /* VisitAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB30951FB67A2E00CA2119 /* VisitAnnotationView.swift */; };
@@ -102,6 +103,7 @@
 		7F2F52021FBA8DF100D4DFBC /* ImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
 		7F6983AE1F8EB61E00064CD8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSUAnnotation.swift; sourceTree = "<group>"; };
+		7F8B5CBD1FBCE78500BF88E9 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableVC.swift; sourceTree = "<group>"; };
 		7FA688B91FB662F700850B42 /* MapStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStartVC.swift; sourceTree = "<group>"; };
 		7FAB30951FB67A2E00CA2119 /* VisitAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitAnnotationView.swift; sourceTree = "<group>"; };
@@ -309,13 +311,14 @@
 		B091DFDC1F85A4DC00BB9ACD /* Outings */ = {
 			isa = PBXGroup;
 			children = (
-				7F2378431FB27F190078D7B3 /* Main.storyboard */,
 				7F00D3481FB83DEA00F8E775 /* Services */,
 				7F23784B1FB27FAB0078D7B3 /* LoginMVC */,
 				7FBD42F81FB2BC080068B177 /* TabMVC */,
 				7FB222BC1FBA687700F6E506 /* Prototyping */,
 				7F012D201FBA401D00EE3689 /* Helpers */,
 				B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */,
+				7F2378431FB27F190078D7B3 /* Main.storyboard */,
+				7F8B5CBD1FBCE78500BF88E9 /* ProfileVC.swift */,
 				B091DFE61F85A4DC00BB9ACD /* LaunchScreen.storyboard */,
 				B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */,
 				7F2378331FB279920078D7B3 /* Images.xcassets */,
@@ -489,6 +492,7 @@
 				7F00D34E1FB8E20100F8E775 /* MapSearchVC.swift in Sources */,
 				B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */,
 				7FEA6F501FB96B8700D03C2D /* NewOutingVC.swift in Sources */,
+				7F8B5CBE1FBCE78500BF88E9 /* ProfileVC.swift in Sources */,
 				7FA688BA1FB662F700850B42 /* MapStartVC.swift in Sources */,
 				7FA2FEB71FB40AFC000EE6CF /* HomeTableVC.swift in Sources */,
 				7F2F52031FBA8DF100D4DFBC /* ImagePickerController.swift in Sources */,

@@ -19,7 +19,15 @@ class Outing {
     var date: String { return _date }
     var info: String { return _info }
     
+//    var imageURL: String { return _imageURL }
+//    var user: String { return _user }
+//    var date: String { return _date }
+//    var title: String { return _title }
+//    var time: String { return _time }
+//    var allowFriends: Bool { return _allowFirends }
+//    var location:
     
+     
     init(mapImage: UIImage, username: String, date: String, info: String) {
         self._mapImage = mapImage
         self._username = username
