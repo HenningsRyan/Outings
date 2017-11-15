@@ -25,7 +25,7 @@ class MapStartVC: UIViewController {
     var baseClassifier: ActivityTypeClassifier<ActivityTypesCache>?
     var transportClassifier: ActivityTypeClassifier<ActivityTypesCache>?
     
-    var settings = SettingsView()
+//    var settings = SettingsView()
     
     public var appIsTracking = false
     
@@ -55,6 +55,8 @@ class MapStartVC: UIViewController {
         }
         
         centre.addObserver(forName: .settingsChanged, object: settings, queue: OperationQueue.main) { _ in
+            
+            print("RYAN: Settings Changed")
             self.updateTheMap()
         }
         loco.requestLocationPermission()
@@ -63,6 +65,14 @@ class MapStartVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        settings.autoZoomMap = autoZoom
+        settings.showRawLocations = showRaw
+        settings.showStationaryCircles = showStops
+        
+        self.updateTheMap()
+    
+        print("RYAN: AutoZoom = \(settings.autoZoomMap)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,6 +91,7 @@ class MapStartVC: UIViewController {
         //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
         userIconButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
+        userIconButton.addTarget(self, action: #selector(self.profilePressed), for: .touchUpInside)
         
         let mapAddButton = UIButton(type: .system)
         
@@ -90,6 +101,10 @@ class MapStartVC: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
         
         mapAddButton.addTarget(self, action: #selector(self.mapTrackingTogglePressed), for: .touchUpInside)
+    }
+    
+    @objc func profilePressed() {
+        self.performSegue(withIdentifier: "toProfile", sender: nil)
     }
     
     @objc func mapTrackingTogglePressed(_ sender: UIButton) {
@@ -334,3 +349,8 @@ extension MapStartVC: MKMapViewDelegate {
         return nil
     }
 }
+
+var settings = SettingsView()
+var autoZoom = true
+var showRaw = false
+var showStops = true

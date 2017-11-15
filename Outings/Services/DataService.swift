@@ -21,12 +21,15 @@ class DataService {
     private var _REF_OUTINGS = DB_BASE.collection("outings")
     private var _REF_USERS = DB_BASE.collection("users")
     
+    var currentUserID: String?
+    
     var REF_BASE: Firestore              { return _REF_BASE }
     var REF_OUTINGS: CollectionReference { return _REF_OUTINGS }
     var REF_USERS: CollectionReference   { return _REF_USERS }
     
     
-    // TODO: Might not need uid
+    
+    
     func createFirestoreDBUser(uid: String, userData: Dictionary<String, String>) {
         
         REF_USERS.document(uid).setData(userData) { (error) in
@@ -34,6 +37,7 @@ class DataService {
                 print("RYAN: Error adding user document - error: \(String(describing: error))")
             }
         }
+        currentUserID = uid
         
 //        addDocument(data: userData) { (error) in
 //            if error != nil {

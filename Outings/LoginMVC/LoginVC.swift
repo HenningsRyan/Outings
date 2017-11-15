@@ -109,6 +109,8 @@ class LoginVC: UIViewController {
                 else{
                     //MARK: FB User Authenticated
                     print("RYAN: Firebase FB User Authenticated")
+                    let fbPhotoURL = String(describing: user?.photoURL)
+                    
                     if let userID = user?.uid,
                         let provider = user?.providerID,
                         let emailAddr = user?.email,
@@ -116,6 +118,7 @@ class LoginVC: UIViewController {
                         let userData = [
                             "provider": provider,
                             "email": emailAddr,
+                            "photo": fbPhotoURL,
                             "username": username]
                         self.completeSignIn(id: userID, userData: userData)
                     } else {

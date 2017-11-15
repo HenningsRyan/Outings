@@ -14,6 +14,7 @@ extension NSNotification.Name {
 
 class SettingsView: UIScrollView {
     
+    
     var showRawLocations = false
     var showFilteredLocations = true
     var showLocomotionSamples = false
