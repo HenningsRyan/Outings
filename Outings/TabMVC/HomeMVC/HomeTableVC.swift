@@ -17,17 +17,49 @@ class HomeTableVC: UITableViewController {
         
         setUpNavigationBarItems()
         
+//        DataService.dataStorage.REF_OUTINGS.document("cFI9SIJpijocYqYiSjP9").addSnapshotListener { (documentSnapshot, error) in
+//            guard let document = documentSnapshot else {
+//                print("RYAN: Error fetching document: \(error!)")
+//                return
+//            }
+//            print("RYAN: Current data: \(document.data())")
+//        }
         
+        DataService.dataStorage.REF_OUTINGS.addSnapshotListener { (query, error) in
+            guard let documents = query?.documents else {
+                print("RYAN: Error fetching documents: \(error!)")
+                return
+            }
+            
+            for document in documents {
+                print("RYAN: \(document.documentID) => \(document.data())")
+            }
+        }
+        
+        // Print all document data in a collection
+//        DataService.dataStorage.REF_OUTINGS.getDocuments { (querySnapshot, error) in
+//            if let err = err {
+//                print("RYAN: Error getting documents: \(error)")
+//            } else {
+//                for document in querySnapshot!.documents {
+//                    print("RYAN: \(document.documentID) => \(document.data())")
+//                }
+//            }
+//        }
+ 
+ 
+        
+        // Hard Coded data for demonstration
         self.tableView.backgroundColor = UIColor(hexString: "1A79AC")
         tableView.separatorStyle = .none
         let o1 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennings", date: "11/21/17", info: "Mission Peak Hike!")
-        let o2 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ben Dover", date: "11/27/17", info: "Campbell Bar Crawl")
-        let o3 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Mike Hawk", date: "11/29/17", info: "Neighborhood Walk")
-        let o4 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Barry McCockiner", date: "12/02/17", info: "SF Parade")
+        let o2 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Sarah Hoover", date: "11/27/17", info: "Campbell Bar Crawl")
+        let o3 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "John Daily", date: "11/29/17", info: "Neighborhood Walk")
+        let o4 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Hayley McCollins", date: "12/02/17", info: "SF Parade")
         let o5 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Amanda Hugenkiss", date: "12/10/17", info: "Coffee Crawl")
         let o6 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Wayne Kerr", date: "12/13/17", info: "Mt. Everest Hike")
-        let o7 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Matt Sterbate", date: "01/08/18", info: "El Toro Night Walk")
-        let o8 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Jack Cass", date: "01/21/18", info: "SJSU Lap")
+        let o7 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Matt Stonie", date: "01/08/18", info: "El Toro Night Walk")
+        let o8 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Taylor Renae", date: "01/21/18", info: "SJSU Lap")
 
         outings.append(o1)
         outings.append(o2)
@@ -148,6 +180,7 @@ class HomeTableVC: UITableViewController {
         //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
         userIconButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
+        userIconButton.addTarget(self, action: #selector(self.profilePressed), for: .touchUpInside)
         
         let mapAddButton = UIButton(type: .system)
         
@@ -162,7 +195,10 @@ class HomeTableVC: UITableViewController {
     @objc func mapPressed(sender: UIButton!) {
         self.performSegue(withIdentifier: "toNewOuting", sender: nil)
     }
-
+    
+    @objc func profilePressed() {
+        self.performSegue(withIdentifier: "toProfile", sender: nil)
+    }
 }
 
 extension UIColor {

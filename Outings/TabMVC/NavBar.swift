@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Eureka
 
 class NavBar: UIViewController {
 
@@ -27,6 +28,7 @@ class NavBar: UIViewController {
         //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
         userIconButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
+        userIconButton.addTarget(self, action: #selector(self.profilePressed), for: .touchUpInside)
         
         let mapAddButton = UIButton(type: .system)
         
@@ -40,5 +42,9 @@ class NavBar: UIViewController {
     
     @objc func mapPressed(sender: UIButton!) {
         self.performSegue(withIdentifier: "toNewOuting", sender: nil)
+    }
+    
+    @objc func profilePressed(sender: UIButton!) {
+        self.performSegue(withIdentifier: "toProfile", sender: nil)
     }
 }
