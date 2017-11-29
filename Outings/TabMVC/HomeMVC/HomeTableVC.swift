@@ -53,7 +53,7 @@ class HomeTableVC: UITableViewController {
  
         
         // Hard Coded data for demonstration
-        self.tableView.backgroundColor = UIColor(hexString: "1A79AC")
+        self.tableView.backgroundColor = UIColor(hexString: "1AA1D1")
         tableView.separatorStyle = .none
         let o1 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennings", date: "11/21/17", info: "Mission Peak Hike!")
         let o2 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Sarah Hoover", date: "11/27/17", info: "Campbell Bar Crawl")
@@ -120,6 +120,8 @@ class HomeTableVC: UITableViewController {
             whiteRoundedView.layer.cornerRadius = 10.0
             whiteRoundedView.layer.shadowOffset = CGSize(width: -1, height: 1)
             whiteRoundedView.layer.shadowOpacity = 0.2
+            whiteRoundedView.layer.borderColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0, 0, 0, 0.5])
+            whiteRoundedView.layer.borderWidth = 1
             cell.contentView.addSubview(whiteRoundedView)
             cell.contentView.sendSubview(toBack: whiteRoundedView)
             // End Formatting
