@@ -43,11 +43,11 @@ class NewOutingVC: FormViewController {
         super.viewDidLoad()
         
         // Add top logo
-//        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
-//        titleImageView.frame = CGRect(x: 0, y: 0, width: 70, height: 34)
-//        titleImageView.contentMode = .scaleAspectFit
-//        navigationItem.titleView = titleImageView
-        
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "New-Outing"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 102, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = titleImageView
+//
         // Initialize Varibles sent to Firestore
         dateTimeValue = Date()
         toggleSwitch = true

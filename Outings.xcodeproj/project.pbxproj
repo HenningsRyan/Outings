@@ -64,7 +64,6 @@
 		7FBE4B0B1FB2E505000C1F65 /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B0A1FB2E505000C1F65 /* MapsVC.swift */; };
 		7FBE4B0D1FB2E8C2000C1F65 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE4B0C1FB2E8C2000C1F65 /* NotificationsVC.swift */; };
 		7FEA6F501FB96B8700D03C2D /* NewOutingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA6F4F1FB96B8700D03C2D /* NewOutingVC.swift */; };
-		7FFDCCD01FB44FBF0097552C /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */; };
 		7FFDCCD21FB4E9240097552C /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */; };
 		7FFDCCD41FB4EE810097552C /* OutingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDCCD31FB4EE810097552C /* OutingModel.swift */; };
 		B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */; };
@@ -163,7 +162,6 @@
 		7FBE4B0A1FB2E505000C1F65 /* MapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
 		7FBE4B0C1FB2E8C2000C1F65 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		7FEA6F4F1FB96B8700D03C2D /* NewOutingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOutingVC.swift; sourceTree = "<group>"; };
-		7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		7FFDCCD31FB4EE810097552C /* OutingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutingModel.swift; sourceTree = "<group>"; };
 		B091DFDA1F85A4DC00BB9ACD /* Outings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -343,7 +341,6 @@
 		7FB222BC1FBA687700F6E506 /* Prototyping */ = {
 			isa = PBXGroup;
 			children = (
-				7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */,
 				7F00D34D1FB8E20100F8E775 /* MapSearchVC.swift */,
 				B091DFDF1F85A4DC00BB9ACD /* MapTestVC.swift */,
 				7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */,
@@ -479,7 +476,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B091DFE81F85A4DC00BB9ACD /* LaunchScreen.storyboard in Resources */,
-				7FFDCCD01FB44FBF0097552C /* HomeView.storyboard in Resources */,
 				7F2378441FB27F190078D7B3 /* Main.storyboard in Resources */,
 				7F2378341FB279930078D7B3 /* Images.xcassets in Resources */,
 				7F00D33F1FB7903E00F8E775 /* PeriscopeCell.xib in Resources */,
