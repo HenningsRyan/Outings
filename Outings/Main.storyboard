@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -340,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjL-3F-5cT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5166" y="-681"/>
+            <point key="canvasLocation" x="3887" y="-699"/>
         </scene>
         <!--Item-->
         <scene sceneID="Biv-cL-KXv">
@@ -422,7 +423,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRY-30-TmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="96"/>
+            <point key="canvasLocation" x="1830" y="841"/>
         </scene>
         <!--Home-->
         <scene sceneID="Dju-Wg-bZp">
@@ -465,14 +466,14 @@
                     <navigationItem key="navigationItem" id="Dzz-6B-YJB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="W6s-K7-4v9" kind="showDetail" identifier="toNewOuting" action="showViewController:sender:" id="3GS-Ch-UDi"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="logout" id="bLa-hx-9sN"/>
                         <segue destination="kju-OU-nxE" kind="show" identifier="toProfile" action="showDetailViewController:sender:" id="3Fy-au-LYf"/>
+                        <segue destination="0pU-FK-Q0F" kind="show" identifier="toNewOuting" id="mZ2-x7-q5B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwl-K9-pep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3014" y="985"/>
+            <point key="canvasLocation" x="2916" y="13"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="VoN-M6-lao">
@@ -594,11 +595,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqr-1O-0Fh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="985"/>
+            <point key="canvasLocation" x="1895" y="50"/>
         </scene>
         <!--New Outing Nav Controller-->
         <scene sceneID="RkP-MV-SX8">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZL8-j8-M7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W6s-K7-4v9" customClass="NewOutingNavController" customModule="Outings" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zKJ-Ix-0II">
@@ -611,13 +613,9 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0pU-FK-Q0F" kind="relationship" relationship="rootViewController" id="P6B-Zk-Qb1"/>
-                    </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZL8-j8-M7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4298" y="-681"/>
+            <point key="canvasLocation" x="5057" y="-699"/>
         </scene>
         <!--Map SearchVC-->
         <scene sceneID="dG3-Oo-HRc">
@@ -830,8 +828,8 @@
                     <navigationItem key="navigationItem" id="3EI-ee-5Dd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="W6s-K7-4v9" kind="showDetail" identifier="toNewOuting" id="sud-nE-9If"/>
                         <segue destination="kju-OU-nxE" kind="show" identifier="toProfile" action="showDetailViewController:sender:" id="R7Z-pg-x48"/>
+                        <segue destination="0pU-FK-Q0F" kind="show" identifier="toNewOuting" id="C4g-11-8g0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyy-FC-DAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -851,13 +849,12 @@
                     <navigationItem key="navigationItem" id="l5c-53-6L6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="W6s-K7-4v9" kind="showDetail" identifier="toNewOuting" id="ysS-vK-s8V"/>
                         <segue destination="kju-OU-nxE" kind="show" identifier="toProfile" action="showDetailViewController:sender:" id="3Gy-W9-SOi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8GY-lc-Ki3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3014" y="135"/>
+            <point key="canvasLocation" x="2814" y="841"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RwU-Jc-3wo">
@@ -884,7 +881,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qid-tH-YcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4465" y="985"/>
+            <point key="canvasLocation" x="3964" y="796"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="biS-Kh-GNh">
@@ -923,7 +920,7 @@
         <image name="user" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R7Z-pg-x48"/>
-        <segue reference="sud-nE-9If"/>
+        <segue reference="3Gy-W9-SOi"/>
+        <segue reference="C4g-11-8g0"/>
     </inferredMetricsTieBreakers>
 </document>

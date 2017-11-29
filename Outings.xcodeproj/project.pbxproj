@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F00D3391FB78BFF00F8E775 /* XLActionController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00D3381FB78BFF00F8E775 /* XLActionController.framework */; };
 		7F00D33F1FB7903E00F8E775 /* PeriscopeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F00D33D1FB7903E00F8E775 /* PeriscopeCell.xib */; };
 		7F00D3431FB791F500F8E775 /* Periscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00D3421FB7916400F8E775 /* Periscope.swift */; };
 		7F00D3471FB7D43D00F8E775 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00D3461FB7D43D00F8E775 /* constants.swift */; };
@@ -25,6 +24,25 @@
 		7F2F52041FBA8DF100D4DFBC /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F52021FBA8DF100D4DFBC /* ImageRow.swift */; };
 		7F6983AF1F8EB61E00064CD8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6983AE1F8EB61E00064CD8 /* MapKit.framework */; };
 		7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */; };
+		7F8967901FCE608000345792 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967A21FCE608000345792 /* Bolts.framework */; };
+		7F8967911FCE608000345792 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967A31FCE608000345792 /* Cartography.framework */; };
+		7F8967921FCE608000345792 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967A41FCE608000345792 /* Eureka.framework */; };
+		7F8967931FCE608000345792 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967A51FCE608000345792 /* FBSDKCoreKit.framework */; };
+		7F8967941FCE608000345792 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967A61FCE608000345792 /* FBSDKLoginKit.framework */; };
+		7F8967951FCE608000345792 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967A71FCE608000345792 /* GoogleToolboxForMac.framework */; };
+		7F8967961FCE608000345792 /* grpc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967A81FCE608000345792 /* grpc.framework */; };
+		7F8967971FCE608000345792 /* GRPCClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967A91FCE608000345792 /* GRPCClient.framework */; };
+		7F8967981FCE608000345792 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967AA1FCE608000345792 /* GTMSessionFetcher.framework */; };
+		7F8967991FCE608000345792 /* leveldb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967AB1FCE608000345792 /* leveldb.framework */; };
+		7F89679A1FCE608000345792 /* MGEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967AC1FCE608000345792 /* MGEvents.framework */; };
+		7F89679B1FCE608000345792 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967AD1FCE608000345792 /* nanopb.framework */; };
+		7F89679C1FCE608000345792 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967AE1FCE608000345792 /* openssl.framework */; };
+		7F89679D1FCE608000345792 /* Pods_Outings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967AF1FCE608000345792 /* Pods_Outings.framework */; };
+		7F89679E1FCE608000345792 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967B01FCE608000345792 /* Protobuf.framework */; };
+		7F89679F1FCE608000345792 /* ProtoRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967B11FCE608000345792 /* ProtoRPC.framework */; };
+		7F8967A01FCE608000345792 /* RxLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967B21FCE608000345792 /* RxLibrary.framework */; };
+		7F8967A11FCE608000345792 /* XLActionController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967B31FCE608000345792 /* XLActionController.framework */; };
+		7F8967B41FCE60B400345792 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1637F11FBA7C8C009E0A83 /* CoreLocation.framework */; };
 		7F8B5CBE1FBCE78500BF88E9 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8B5CBD1FBCE78500BF88E9 /* ProfileVC.swift */; };
 		7FA2FEB71FB40AFC000EE6CF /* HomeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */; };
 		7FA688BA1FB662F700850B42 /* MapStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA688B91FB662F700850B42 /* MapStartVC.swift */; };
@@ -49,7 +67,6 @@
 		7FFDCCD01FB44FBF0097552C /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFDCCCF1FB44FBF0097552C /* HomeView.storyboard */; };
 		7FFDCCD21FB4E9240097552C /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDCCD11FB4E9240097552C /* HomeViewCell.swift */; };
 		7FFDCCD41FB4EE810097552C /* OutingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDCCD31FB4EE810097552C /* OutingModel.swift */; };
-		8D89BFE2051B50AE32ADBE32 /* Pods_Outings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399FE6C519BBFE9606651354 /* Pods_Outings.framework */; };
 		B091DFDE1F85A4DC00BB9ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DFDD1F85A4DC00BB9ACD /* AppDelegate.swift */; };
 		B091DFE01F85A4DC00BB9ACD /* MapTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DFDF1F85A4DC00BB9ACD /* MapTestVC.swift */; };
 		B091DFE51F85A4DC00BB9ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B091DFE41F85A4DC00BB9ACD /* Assets.xcassets */; };
@@ -81,9 +98,7 @@
 
 /* Begin PBXFileReference section */
 		1C1C695030653DD44CA279E2 /* Pods-Outings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Outings.release.xcconfig"; path = "Pods/Target Support Files/Pods-Outings/Pods-Outings.release.xcconfig"; sourceTree = "<group>"; };
-		399FE6C519BBFE9606651354 /* Pods_Outings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Outings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC1CAFC2DD965384BC6885A /* Pods-Outings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Outings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Outings/Pods-Outings.debug.xcconfig"; sourceTree = "<group>"; };
-		7F00D3381FB78BFF00F8E775 /* XLActionController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLActionController.framework; path = Carthage/Build/iOS/XLActionController.framework; sourceTree = "<group>"; };
 		7F00D33D1FB7903E00F8E775 /* PeriscopeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeriscopeCell.xib; sourceTree = "<group>"; };
 		7F00D3421FB7916400F8E775 /* Periscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periscope.swift; sourceTree = "<group>"; };
 		7F00D3461FB7D43D00F8E775 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
@@ -103,6 +118,30 @@
 		7F2F52021FBA8DF100D4DFBC /* ImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
 		7F6983AE1F8EB61E00064CD8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSUAnnotation.swift; sourceTree = "<group>"; };
+		7F8967A21FCE608000345792 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967A31FCE608000345792 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967A41FCE608000345792 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967A51FCE608000345792 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967A61FCE608000345792 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967A71FCE608000345792 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967A81FCE608000345792 /* grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967A91FCE608000345792 /* GRPCClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GRPCClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967AA1FCE608000345792 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967AB1FCE608000345792 /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = leveldb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967AC1FCE608000345792 /* MGEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MGEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967AD1FCE608000345792 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967AE1FCE608000345792 /* openssl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = openssl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967AF1FCE608000345792 /* Pods_Outings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Outings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967B01FCE608000345792 /* Protobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Protobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967B11FCE608000345792 /* ProtoRPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProtoRPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967B21FCE608000345792 /* RxLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967B31FCE608000345792 /* XLActionController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XLActionController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8967B51FCE60B400345792 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		7F8967B61FCE60B400345792 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		7F8967B71FCE60B400345792 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
+		7F8967B81FCE60B500345792 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		7F8967B91FCE60B500345792 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7F8967BA1FCE60B500345792 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7F8B5CBD1FBCE78500BF88E9 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7FA2FEB61FB40AFC000EE6CF /* HomeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableVC.swift; sourceTree = "<group>"; };
 		7FA688B91FB662F700850B42 /* MapStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStartVC.swift; sourceTree = "<group>"; };
@@ -140,9 +179,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8967B41FCE60B400345792 /* CoreLocation.framework in Frameworks */,
 				7F6983AF1F8EB61E00064CD8 /* MapKit.framework in Frameworks */,
-				7F00D3391FB78BFF00F8E775 /* XLActionController.framework in Frameworks */,
-				8D89BFE2051B50AE32ADBE32 /* Pods_Outings.framework in Frameworks */,
+				7F8967901FCE608000345792 /* Bolts.framework in Frameworks */,
+				7F8967911FCE608000345792 /* Cartography.framework in Frameworks */,
+				7F8967921FCE608000345792 /* Eureka.framework in Frameworks */,
+				7F8967931FCE608000345792 /* FBSDKCoreKit.framework in Frameworks */,
+				7F8967941FCE608000345792 /* FBSDKLoginKit.framework in Frameworks */,
+				7F8967951FCE608000345792 /* GoogleToolboxForMac.framework in Frameworks */,
+				7F8967961FCE608000345792 /* grpc.framework in Frameworks */,
+				7F8967971FCE608000345792 /* GRPCClient.framework in Frameworks */,
+				7F8967981FCE608000345792 /* GTMSessionFetcher.framework in Frameworks */,
+				7F8967991FCE608000345792 /* leveldb.framework in Frameworks */,
+				7F89679A1FCE608000345792 /* MGEvents.framework in Frameworks */,
+				7F89679B1FCE608000345792 /* nanopb.framework in Frameworks */,
+				7F89679C1FCE608000345792 /* openssl.framework in Frameworks */,
+				7F89679D1FCE608000345792 /* Pods_Outings.framework in Frameworks */,
+				7F89679E1FCE608000345792 /* Protobuf.framework in Frameworks */,
+				7F89679F1FCE608000345792 /* ProtoRPC.framework in Frameworks */,
+				7F8967A01FCE608000345792 /* RxLibrary.framework in Frameworks */,
+				7F8967A11FCE608000345792 /* XLActionController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,11 +284,33 @@
 		7F6983AB1F8EB61E00064CD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F8967BA1FCE60B500345792 /* AVFoundation.framework */,
+				7F8967B81FCE60B500345792 /* AVKit.framework */,
+				7F8967B61FCE60B400345792 /* HealthKit.framework */,
+				7F8967B71FCE60B400345792 /* HealthKitUI.framework */,
+				7F8967B51FCE60B400345792 /* LocalAuthentication.framework */,
+				7F8967B91FCE60B500345792 /* UIKit.framework */,
+				7F8967A21FCE608000345792 /* Bolts.framework */,
+				7F8967A31FCE608000345792 /* Cartography.framework */,
+				7F8967A41FCE608000345792 /* Eureka.framework */,
+				7F8967A51FCE608000345792 /* FBSDKCoreKit.framework */,
+				7F8967A61FCE608000345792 /* FBSDKLoginKit.framework */,
+				7F8967A71FCE608000345792 /* GoogleToolboxForMac.framework */,
+				7F8967A81FCE608000345792 /* grpc.framework */,
+				7F8967A91FCE608000345792 /* GRPCClient.framework */,
+				7F8967AA1FCE608000345792 /* GTMSessionFetcher.framework */,
+				7F8967AB1FCE608000345792 /* leveldb.framework */,
+				7F8967AC1FCE608000345792 /* MGEvents.framework */,
+				7F8967AD1FCE608000345792 /* nanopb.framework */,
+				7F8967AE1FCE608000345792 /* openssl.framework */,
+				7F8967AF1FCE608000345792 /* Pods_Outings.framework */,
+				7F8967B01FCE608000345792 /* Protobuf.framework */,
+				7F8967B11FCE608000345792 /* ProtoRPC.framework */,
+				7F8967B21FCE608000345792 /* RxLibrary.framework */,
+				7F8967B31FCE608000345792 /* XLActionController.framework */,
 				7F1637F01FBA7C8B009E0A83 /* CoreFoundation.framework */,
 				7F1637F11FBA7C8C009E0A83 /* CoreLocation.framework */,
-				7F00D3381FB78BFF00F8E775 /* XLActionController.framework */,
 				7F6983AE1F8EB61E00064CD8 /* MapKit.framework */,
-				399FE6C519BBFE9606651354 /* Pods_Outings.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -580,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -631,7 +709,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -647,6 +725,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6WA6Y7KBQJ;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -655,7 +734,7 @@
 					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = Outings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = outingsco.Outings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -673,6 +752,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6WA6Y7KBQJ;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -681,7 +761,7 @@
 					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = Outings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = outingsco.Outings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
