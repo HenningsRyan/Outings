@@ -11,9 +11,19 @@ import UIKit
 class HomeTableVC: UITableViewController {
 
     var outings = [Outing]()
+    
+    var titlePassValue: String = ""
+    var usernamePasssValue: String = ""
+    var dataPassValue: String = ""
+    var durationPassValue: String = ""
+    var distancePassValue: String = ""
+    var stepsPassValue: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hidesBottomBarWhenPushed = false
+        self.tabBarController?.tabBar.isHidden = false
         
         setUpNavigationBarItems()
         
@@ -50,16 +60,16 @@ class HomeTableVC: UITableViewController {
  
         
         // Hard Coded data for demonstration
-        self.tableView.backgroundColor = UIColor(hexString: "1A79AC")
+        self.tableView.backgroundColor = UIColor(hexString: "1AA1D1")
         tableView.separatorStyle = .none
-        let o1 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan Hennings", date: "11/21/17", info: "Mission Peak Hike!")
-        let o2 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Sarah Hoover", date: "11/27/17", info: "Campbell Bar Crawl")
-        let o3 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "John Daily", date: "11/29/17", info: "Neighborhood Walk")
-        let o4 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Hayley McCollins", date: "12/02/17", info: "SF Parade")
-        let o5 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Amanda Hugenkiss", date: "12/10/17", info: "Coffee Crawl")
-        let o6 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Wayne Kerr", date: "12/13/17", info: "Mt. Everest Hike")
-        let o7 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Matt Stonie", date: "01/08/18", info: "El Toro Night Walk")
-        let o8 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "Taylor Renae", date: "01/21/18", info: "SJSU Lap")
+        let o1 = Outing(mapImage: #imageLiteral(resourceName: "mission-peak"), username: "Ryan Hennings", date: "12/21/17", info: "Mission Peak Hike!", join: false, duration: "3hr 30min", steps: "10345")
+        let o2 = Outing(mapImage: #imageLiteral(resourceName: "campbell"), username: "Sarah Daily", date: "11/21/17", info: "Campbell Bar Crawl", join: false, duration: "2hr 20min", steps: "5508")
+        let o3 = Outing(mapImage: #imageLiteral(resourceName: "backImage"), username: "John Smith", date: "11/26/17", info: "Neighborhood Walk", duration: "1hr", steps: "6050")
+        let o4 = Outing(mapImage: #imageLiteral(resourceName: "golden-gate-bridge"), username: "Hayley McCollins", date: "12/02/17", info: "SF Parade", duration: "5hr", steps: " ")
+        let o5 = Outing(mapImage: #imageLiteral(resourceName: "coffee"), username: "Amanda George", date: "12/10/17", info: "Coffee Crawl", join: false, duration: "3hr 30min", steps: " ")
+        let o6 = Outing(mapImage: #imageLiteral(resourceName: "everest"), username: "Wayne Kerr", date: "12/13/17", info: "Mt. Everest Hike", join: false, duration: "6hr", steps: " ")
+        let o7 = Outing(mapImage: #imageLiteral(resourceName: "nightwalk"), username: "Matt Stonie", date: "01/08/18", info: "El Toro Night Walk", duration: "2hr", steps: " ")
+        let o8 = Outing(mapImage: #imageLiteral(resourceName: "SJSU_Tower"), username: "Taylor Renae", date: "01/21/18", info: "SJSU Lap", duration: "1hr 30min", steps: " ")
 
         outings.append(o1)
         outings.append(o2)
@@ -75,6 +85,39 @@ class HomeTableVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
+    @IBAction func joinButtonPressed(_ sender: UIButton) {
+        
+        let alertController = UIAlertController(title: "Confirmation", message: "Are you sure you would like to join this Outing?", preferredStyle: .actionSheet)
+//            UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            // no action implemented yet
+            
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            // no cancel implemented yet
+        }
+        
+        
+//            UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(okayAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.hidesBottomBarWhenPushed = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -88,9 +131,30 @@ class HomeTableVC: UITableViewController {
 //        return 1
 //    }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "toOutingDetail") {
+            let passValue = segue.destination as! OutingDetailTVC
+        
+            passValue.titleName = titlePassValue
+            passValue.date = dataPassValue
+            passValue.duration = durationPassValue
+            passValue.member = usernamePasssValue
+            passValue.steps = stepsPassValue
+        }
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let outing = outings[indexPath.row]
-//    }
+        let outing = outings[indexPath.row]
+        
+        titlePassValue = outing.info
+        usernamePasssValue = outing.username
+        durationPassValue = outing.duration
+        stepsPassValue = outing.steps
+        dataPassValue = outing.date
+        
+        performSegue(withIdentifier: "toOutingDetail", sender: outings[indexPath.row])
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -100,13 +164,15 @@ class HomeTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as? HomeViewCell {
             // Card/Cell Formatting
-            cell.contentView.backgroundColor = UIColor(hexString: "1A79AC")
+            cell.contentView.backgroundColor = UIColor(hexString: "1AA1D1")
             let whiteRoundedView : UIView = UIView(frame: CGRect(x: 10, y: 8, width: self.view.frame.size.width - 20, height: 120))
             whiteRoundedView.layer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 1.0, 0.9])
             whiteRoundedView.layer.masksToBounds = false
             whiteRoundedView.layer.cornerRadius = 10.0
             whiteRoundedView.layer.shadowOffset = CGSize(width: -1, height: 1)
             whiteRoundedView.layer.shadowOpacity = 0.2
+            whiteRoundedView.layer.borderColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0, 0, 0, 0.5])
+            whiteRoundedView.layer.borderWidth = 1
             cell.contentView.addSubview(whiteRoundedView)
             cell.contentView.sendSubview(toBack: whiteRoundedView)
             // End Formatting
@@ -190,13 +256,18 @@ class HomeTableVC: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
         
         mapAddButton.addTarget(self, action: #selector(self.mapPressed), for: .touchUpInside)
+        
+        // Back Button Navigation (from next page)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     @objc func mapPressed(sender: UIButton!) {
+        self.hidesBottomBarWhenPushed = true
         self.performSegue(withIdentifier: "toNewOuting", sender: nil)
     }
     
     @objc func profilePressed() {
+        self.hidesBottomBarWhenPushed = true
         self.performSegue(withIdentifier: "toProfile", sender: nil)
     }
 }

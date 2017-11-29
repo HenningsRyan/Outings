@@ -43,11 +43,11 @@ class NewOutingVC: FormViewController {
         super.viewDidLoad()
         
         // Add top logo
-        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
-        titleImageView.frame = CGRect(x: 0, y: 0, width: 70, height: 34)
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "New-Outing"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 102, height: 34)
         titleImageView.contentMode = .scaleAspectFit
-        navigationItem.titleView = titleImageView
-        
+        self.navigationItem.titleView = titleImageView
+//
         // Initialize Varibles sent to Firestore
         dateTimeValue = Date()
         toggleSwitch = true
@@ -55,16 +55,16 @@ class NewOutingVC: FormViewController {
         lattitude = String(format: "%f", (location?.coordinate.latitude)!)
         longitude = String(format: "%f", (location?.coordinate.longitude)!)
         
-        // Back Button
-        let buttonOptions = UIButton(type: .system)
-        buttonOptions.setImage(#imageLiteral(resourceName: "backButton"), for: .normal)
-        buttonOptions.setTitle(" Back", for: .normal)
-        buttonOptions.sizeToFit()
-        buttonOptions.setTitleColor(.white, for: .normal)
-        buttonOptions.tintColor = .white
-        buttonOptions.addTarget(self, action: #selector(backAction), for: .touchUpInside)
-        let backNavButton = UIBarButtonItem(customView: buttonOptions)
-        navigationItem.leftBarButtonItem = backNavButton
+//        // Back Button
+//        let buttonOptions = UIButton(type: .system)
+//        buttonOptions.setImage(#imageLiteral(resourceName: "backButton"), for: .normal)
+//        buttonOptions.setTitle(" Back", for: .normal)
+//        buttonOptions.sizeToFit()
+//        buttonOptions.setTitleColor(.white, for: .normal)
+//        buttonOptions.tintColor = .white
+//        buttonOptions.addTarget(self, action: #selector(backAction), for: .touchUpInside)
+//        let backNavButton = UIBarButtonItem(customView: buttonOptions)
+//        navigationItem.leftBarButtonItem = backNavButton
         
         // Add Outing Button
         self.view.bringSubview(toFront: addOutingButtonLabel)
@@ -72,17 +72,23 @@ class NewOutingVC: FormViewController {
         initializeForm()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
+    
     // MARK: - Back Button Touch Event
     // https://stackoverflow.com/a/38800720
-    @objc func backAction() {
-        let transition: CATransition = CATransition()
-        transition.duration = 0.5
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        transition.type = kCATransitionReveal
-        transition.subtype = kCATransitionFromRight
-        self.view.window!.layer.add(transition, forKey: nil)
-        self.dismiss(animated: false, completion: nil)
-    }
+//    @objc func backAction() {
+//        let transition: CATransition = CATransition()
+//        transition.duration = 0.5
+//        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        transition.type = kCATransitionReveal
+//        transition.subtype = kCATransitionFromRight
+//        self.view.window!.layer.add(transition, forKey: nil)
+//        self.dismiss(animated: false, completion: nil)
+//    }
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
         let fullDate = dateTimeValue?.description.components(separatedBy: " ")

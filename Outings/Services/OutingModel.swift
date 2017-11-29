@@ -19,6 +19,10 @@ class Outing {
     var date: String { return _date }
     var info: String { return _info }
     
+    var isJoinable: Bool = true
+    var duration: String = ""
+    var steps: String = ""
+    
 //    var imageURL: String { return _imageURL }
 //    var user: String { return _user }
 //    var date: String { return _date }
@@ -28,10 +32,13 @@ class Outing {
 //    var location:
     
      
-    init(mapImage: UIImage, username: String, date: String, info: String) {
+    init(mapImage: UIImage, username: String, date: String, info: String, join: Bool = true, duration: String, steps: String) {
         self._mapImage = mapImage
         self._username = username
         self._date = date
         self._info = info
+        self.isJoinable = join
+        self.steps = steps
+        self.duration = duration
     }
 }

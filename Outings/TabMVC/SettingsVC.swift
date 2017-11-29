@@ -15,6 +15,9 @@ class SettingsVC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hidesBottomBarWhenPushed = false
+        self.tabBarController?.tabBar.isHidden = false
+        
         setUpNavigationBarItems()
         
         let settings = SettingsView()
@@ -68,6 +71,16 @@ class SettingsVC: FormViewController {
         //super.setUpNavigationBarItems()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.hidesBottomBarWhenPushed = false
+    }
+    
     func setUpNavigationBarItems() {
         let titleImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
         titleImageView.frame = CGRect(x: 0, y: 0, width: 70, height: 34)
@@ -80,6 +93,7 @@ class SettingsVC: FormViewController {
         //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
         userIconButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
+        userIconButton.addTarget(self, action: #selector(self.profilePressed), for: .touchUpInside)
         
         let mapAddButton = UIButton(type: .system)
         
@@ -89,10 +103,19 @@ class SettingsVC: FormViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
         
         mapAddButton.addTarget(self, action: #selector(self.mapPressed), for: .touchUpInside)
+        
+        // Back Button Navigation (from next page)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     @objc func mapPressed(sender: UIButton!) {
+        self.hidesBottomBarWhenPushed = true
         self.performSegue(withIdentifier: "toNewOuting", sender: nil)
+    }
+    
+    @objc func profilePressed() {
+        self.hidesBottomBarWhenPushed = true
+        self.performSegue(withIdentifier: "toProfile", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {

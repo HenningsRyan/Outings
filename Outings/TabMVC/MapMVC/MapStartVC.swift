@@ -32,6 +32,9 @@ class MapStartVC: UIViewController {
     // MARK: controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarController?.tabBar.isHidden = false
+        self.hidesBottomBarWhenPushed = false
         //        view.backgroundColor = .white
         
         //        startButtonLabel.imageView?.contentMode = .scaleAspectFit
@@ -71,12 +74,19 @@ class MapStartVC: UIViewController {
         settings.showStationaryCircles = showStops
         
         self.updateTheMap()
-    
+
+        self.tabBarController?.tabBar.isHidden = false
+
         print("RYAN: AutoZoom = \(settings.autoZoomMap)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
 //        tappedStart()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.hidesBottomBarWhenPushed = false
     }
     
     func setUpNavigationBarItems() {
@@ -101,9 +111,12 @@ class MapStartVC: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
         
         mapAddButton.addTarget(self, action: #selector(self.mapTrackingTogglePressed), for: .touchUpInside)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     @objc func profilePressed() {
+        self.hidesBottomBarWhenPushed = true
         self.performSegue(withIdentifier: "toProfile", sender: nil)
     }
     
