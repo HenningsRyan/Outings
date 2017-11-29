@@ -89,6 +89,9 @@ class SettingsVC: FormViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
         
         mapAddButton.addTarget(self, action: #selector(self.mapPressed), for: .touchUpInside)
+        
+        // Back Button Navigation (from next page)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     @objc func mapPressed(sender: UIButton!) {
