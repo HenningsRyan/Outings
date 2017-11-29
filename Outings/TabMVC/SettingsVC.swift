@@ -15,6 +15,7 @@ class SettingsVC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hidesBottomBarWhenPushed = true
         
         setUpNavigationBarItems()
         
@@ -68,6 +69,12 @@ class SettingsVC: FormViewController {
         }
         //super.setUpNavigationBarItems()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+
     
     func setUpNavigationBarItems() {
         let titleImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))

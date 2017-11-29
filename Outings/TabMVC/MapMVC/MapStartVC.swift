@@ -32,6 +32,8 @@ class MapStartVC: UIViewController {
     // MARK: controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hidesBottomBarWhenPushed = true
         //        view.backgroundColor = .white
         
         //        startButtonLabel.imageView?.contentMode = .scaleAspectFit
@@ -71,7 +73,9 @@ class MapStartVC: UIViewController {
         settings.showStationaryCircles = showStops
         
         self.updateTheMap()
-    
+
+        self.tabBarController?.tabBar.isHidden = false
+
         print("RYAN: AutoZoom = \(settings.autoZoomMap)")
     }
     

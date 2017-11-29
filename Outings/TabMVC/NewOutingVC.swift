@@ -72,6 +72,12 @@ class NewOutingVC: FormViewController {
         initializeForm()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
+    
     // MARK: - Back Button Touch Event
     // https://stackoverflow.com/a/38800720
 //    @objc func backAction() {

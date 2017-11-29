@@ -41,6 +41,12 @@ class ProfileVC: UIViewController {
 //        let user = FacebookAuthProvider.credential(withAccessToken: )
 //        let userURL = FBSDKProfile.imageURL()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

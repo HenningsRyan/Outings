@@ -14,7 +14,9 @@ class HomeTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.hidesBottomBarWhenPushed = true
+        
+        self.hidesBottomBarWhenPushed = true
+        
         setUpNavigationBarItems()
         
 //        DataService.dataStorage.REF_OUTINGS.document("cFI9SIJpijocYqYiSjP9").addSnapshotListener { (documentSnapshot, error) in
@@ -76,10 +78,10 @@ class HomeTableVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.tabBarController?.tabBar.isHidden = false
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
