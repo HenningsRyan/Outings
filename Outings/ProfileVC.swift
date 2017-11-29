@@ -19,6 +19,12 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add top logo
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "ProfileLogo"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 75, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = titleImageView
 
         self.navigationItem.backBarButtonItem?.tintColor = .white
         
