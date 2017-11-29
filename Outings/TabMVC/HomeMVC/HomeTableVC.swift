@@ -14,7 +14,7 @@ class HomeTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        self.hidesBottomBarWhenPushed = true
         setUpNavigationBarItems()
         
 //        DataService.dataStorage.REF_OUTINGS.document("cFI9SIJpijocYqYiSjP9").addSnapshotListener { (documentSnapshot, error) in
@@ -75,6 +75,11 @@ class HomeTableVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.tabBarController?.tabBar.isHidden = false
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -100,7 +105,7 @@ class HomeTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as? HomeViewCell {
             // Card/Cell Formatting
-            cell.contentView.backgroundColor = UIColor(hexString: "1A79AC")
+            cell.contentView.backgroundColor = UIColor(hexString: "1AA1D1")
             let whiteRoundedView : UIView = UIView(frame: CGRect(x: 10, y: 8, width: self.view.frame.size.width - 20, height: 120))
             whiteRoundedView.layer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 1.0, 0.9])
             whiteRoundedView.layer.masksToBounds = false

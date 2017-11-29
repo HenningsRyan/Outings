@@ -15,6 +15,7 @@ class SettingsVC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         setUpNavigationBarItems()
         
         let settings = SettingsView()
