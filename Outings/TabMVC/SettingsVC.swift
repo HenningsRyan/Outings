@@ -88,6 +88,7 @@ class SettingsVC: FormViewController {
         //        userIconButton.tintColor = UIColor(red: 26, green: 161, blue: 209, alpha: 1)
         userIconButton.frame = CGRect(x: 0, y: 0, width: constants.iconSize, height: constants.iconSize)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userIconButton)
+        userIconButton.addTarget(self, action: #selector(self.profilePressed), for: .touchUpInside)
         
         let mapAddButton = UIButton(type: .system)
         
@@ -104,6 +105,10 @@ class SettingsVC: FormViewController {
     
     @objc func mapPressed(sender: UIButton!) {
         self.performSegue(withIdentifier: "toNewOuting", sender: nil)
+    }
+    
+    @objc func profilePressed() {
+        self.performSegue(withIdentifier: "toProfile", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {
