@@ -11,6 +11,13 @@ import UIKit
 class HomeTableVC: UITableViewController {
 
     var outings = [Outing]()
+    
+    var titlePassValue: String = ""
+    var usernamePasssValue: String = ""
+    var dataPassValue: String = ""
+    var durationPassValue: String = ""
+    var distancePassValue: String = ""
+    var stepsPassValue: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,9 +108,20 @@ class HomeTableVC: UITableViewController {
 //        return 1
 //    }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let passValue = segue.destination as! OutingDetailTVC
+        
+        passValue.titleName = titlePassValue
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let outing = outings[indexPath.row]
-//    }
+        let outing = outings[indexPath.row]
+        
+        titlePassValue = outing.info
+        usernamePasssValue = outing.username
+        
+        performSegue(withIdentifier: "toOutingDetail", sender: outings[indexPath.row])
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

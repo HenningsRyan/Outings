@@ -19,6 +19,8 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var outingInfoLabel: UILabel!
     @IBOutlet weak var joinButton: UIButton!
     
+    
+    
 //    let mapCell0 = mapCell(mapImage: #imageLiteral(resourceName: "backImage"), username: "Ryan", date: "01/21/18", info: "Custom cell asdl dafl adlldaf adklf dk dkf akdf df dfk")
     
 //    var cellData: mapCell? {

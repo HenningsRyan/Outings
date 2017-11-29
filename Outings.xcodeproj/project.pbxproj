@@ -22,6 +22,7 @@
 		7F2D821F1FB2456900221743 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D821E1FB2456900221743 /* GoogleService-Info.plist */; };
 		7F2F52031FBA8DF100D4DFBC /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F52011FBA8DF100D4DFBC /* ImagePickerController.swift */; };
 		7F2F52041FBA8DF100D4DFBC /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F52021FBA8DF100D4DFBC /* ImageRow.swift */; };
+		7F54651B1FCF0EAA004DCAE3 /* OutingDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54651A1FCF0EAA004DCAE3 /* OutingDetailTVC.swift */; };
 		7F6983AF1F8EB61E00064CD8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6983AE1F8EB61E00064CD8 /* MapKit.framework */; };
 		7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */; };
 		7F8967901FCE608000345792 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8967A21FCE608000345792 /* Bolts.framework */; };
@@ -115,6 +116,7 @@
 		7F2D821E1FB2456900221743 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F2F52011FBA8DF100D4DFBC /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		7F2F52021FBA8DF100D4DFBC /* ImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
+		7F54651A1FCF0EAA004DCAE3 /* OutingDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutingDetailTVC.swift; sourceTree = "<group>"; };
 		7F6983AE1F8EB61E00064CD8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7F6983B01F8EBF9D00064CD8 /* SJSUAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSUAnnotation.swift; sourceTree = "<group>"; };
 		7F8967A21FCE608000345792 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -361,6 +363,7 @@
 				7FBE4B0A1FB2E505000C1F65 /* MapsVC.swift */,
 				7FBE4B0C1FB2E8C2000C1F65 /* NotificationsVC.swift */,
 				7F0A00F21FB2EB9D002BC7C1 /* SettingsVC.swift */,
+				7F54651A1FCF0EAA004DCAE3 /* OutingDetailTVC.swift */,
 			);
 			path = TabMVC;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				7F00D34A1FB83DFB00F8E775 /* DataService.swift in Sources */,
 				7FBE4B091FB2E409000C1F65 /* NavBar.swift in Sources */,
 				7FAB30A31FB67A2F00CA2119 /* Array.helpers.swift in Sources */,
+				7F54651B1FCF0EAA004DCAE3 /* OutingDetailTVC.swift in Sources */,
 				7FAB30A61FB67A2F00CA2119 /* PathPolyline.swift in Sources */,
 				7F23784A1FB27F340078D7B3 /* AMInputView.swift in Sources */,
 				7F6983B11F8EBF9D00064CD8 /* SJSUAnnotation.swift in Sources */,
