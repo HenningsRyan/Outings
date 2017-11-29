@@ -28,13 +28,21 @@ class HomeViewCell: UITableViewCell {
 //    }
     
     func updateUI(outing: Outing) {
-//        mapImageView?.image = #imageLiteral(resourceName: "backImage")
-//        mapImageView.layer.cornerRadius = 10.0
-//        mapImageView.clipsToBounds = true
-////        usernameLabel?.text = outing.username
-//        userIcon.image = #imageLiteral(resourceName: "user")
-//        dateLabel.text = outing.date
-//        outingInfoLabel.text = outing.info
+        mapImageView?.image = outing.mapImage
+        mapImageView.layer.cornerRadius = 10.0
+        mapImageView.clipsToBounds = true
+        usernameLabel?.text = outing.username
+        userIcon.image = #imageLiteral(resourceName: "user")
+        dateLabel.text = outing.date
+        outingInfoLabel.text = outing.info
+        
+        
+        if outing.isJoinable {
+            joinButton.isHidden = false
+        }
+        else {
+            joinButton.isHidden = true
+        }
     }
     
     

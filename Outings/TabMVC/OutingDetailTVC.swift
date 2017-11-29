@@ -17,18 +17,31 @@ class OutingDetailTVC: UITableViewController {
     @IBOutlet weak var titleNameLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var stepsLabel: UILabel!
+    @IBOutlet weak var memberNameLabel: UILabel!
     
     var titleName = "Title Pass Error"
+    var date = " "
+    var duration = " "
+    var steps = " "
+    var member = " "
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Add top logo
         let titleImageView = UIImageView(image: #imageLiteral(resourceName: "DetailsLogo"))
-        titleImageView.frame = CGRect(x: 0, y: 0, width: 92, height: 34)
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 87, height: 34)
         titleImageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = titleImageView
         
         titleNameLabel.text = titleName
+        dateLabel.text = date
+        durationLabel.text = duration
+        stepsLabel.text = steps
+        memberNameLabel.text = member
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
