@@ -33,7 +33,8 @@ class MapStartVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hidesBottomBarWhenPushed = true
+        self.tabBarController?.tabBar.isHidden = false
+        self.hidesBottomBarWhenPushed = false
         //        view.backgroundColor = .white
         
         //        startButtonLabel.imageView?.contentMode = .scaleAspectFit
@@ -83,6 +84,11 @@ class MapStartVC: UIViewController {
 //        tappedStart()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.hidesBottomBarWhenPushed = false
+    }
+    
     func setUpNavigationBarItems() {
         let titleImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
         titleImageView.frame = CGRect(x: 0, y: 0, width: 70, height: 34)
@@ -105,9 +111,12 @@ class MapStartVC: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mapAddButton)
         
         mapAddButton.addTarget(self, action: #selector(self.mapTrackingTogglePressed), for: .touchUpInside)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     @objc func profilePressed() {
+        self.hidesBottomBarWhenPushed = true
         self.performSegue(withIdentifier: "toProfile", sender: nil)
     }
     

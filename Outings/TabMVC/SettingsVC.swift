@@ -15,7 +15,8 @@ class SettingsVC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hidesBottomBarWhenPushed = true
+        self.hidesBottomBarWhenPushed = false
+        self.tabBarController?.tabBar.isHidden = false
         
         setUpNavigationBarItems()
         
@@ -75,6 +76,10 @@ class SettingsVC: FormViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.hidesBottomBarWhenPushed = false
+    }
     
     func setUpNavigationBarItems() {
         let titleImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
@@ -104,10 +109,12 @@ class SettingsVC: FormViewController {
     }
     
     @objc func mapPressed(sender: UIButton!) {
+        self.hidesBottomBarWhenPushed = true
         self.performSegue(withIdentifier: "toNewOuting", sender: nil)
     }
     
     @objc func profilePressed() {
+        self.hidesBottomBarWhenPushed = true
         self.performSegue(withIdentifier: "toProfile", sender: nil)
     }
     

@@ -15,7 +15,8 @@ class HomeTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hidesBottomBarWhenPushed = true
+        self.hidesBottomBarWhenPushed = false
+        self.tabBarController?.tabBar.isHidden = false
         
         setUpNavigationBarItems()
         
@@ -76,6 +77,11 @@ class HomeTableVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.hidesBottomBarWhenPushed = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -203,10 +209,12 @@ class HomeTableVC: UITableViewController {
     }
     
     @objc func mapPressed(sender: UIButton!) {
+        self.hidesBottomBarWhenPushed = true
         self.performSegue(withIdentifier: "toNewOuting", sender: nil)
     }
     
     @objc func profilePressed() {
+        self.hidesBottomBarWhenPushed = true
         self.performSegue(withIdentifier: "toProfile", sender: nil)
     }
 }
